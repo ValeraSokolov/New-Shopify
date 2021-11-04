@@ -12,7 +12,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> </head>
 
 <body class="page-body">
-	<header class="header">
+  <header class="header">
+	<div class="header_top">
 		<div class="container">
 			<div class="top-bar">
         <nav class="top_nav">
@@ -23,9 +24,42 @@
               <option>RUS</option>
             </select>
           </div>
+          <div class="right_bar">
+            <button class="help">Help</button>
+            <button class="wishlist">&#9825 Wishlist</button>
+            <select class="language">
+              <option class="lang_list">English</option>
+              <option class="lang_list">Russian</option>
+              <option class="lang_list">Ukrainian</option>
+            </select>
+            <button class="download_app">Download App</button>
+          </div>
         </nav>
 			</div>
+      </div>
 		</div>
+    <div class="header_logo container">
+      <a href="#" class="tittle_logo"><img src="img\logo_header.png">
+      </a>
+      <div class="logo_text">SuperMart</div>
+      <div class="input_wrapper col-6">
+        <form class="form_search">  
+          <input type="text" class="input_search" placeholder="Search">
+          <select class="categories">
+            <option>All Categories</option>
+          </select>
+          <button type="submit">
+            <svg class="svg-icon" viewBox="0 0 20 20">
+							<path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+								c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+								c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+								s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+						</svg>
+          </button>
+        </form> 
+      </div>
+    </div>
+    
 	</header>
 	<main>
 		

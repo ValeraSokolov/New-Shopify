@@ -1,4 +1,3 @@
-п
 *,
 *:before,
 *:after {
@@ -9,15 +8,21 @@ body {
   display: block;
   height: 100%;
   margin: 0 auto;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 .page-body {
   min-height: 100%;
 }
- 
-.header {
-  display: block;
 
+.header {
+  background: #408de4;
+  height: 160px;
+}
+
+.header_top {
+  display: flex;
+  background-color: #3b83d4;
 }
 
 .container {
@@ -29,16 +34,16 @@ body {
 }
 
 .top-bar {
-display: flex;
-justify-content: space-between;
-background-color: #3b83d4;
-width: 100%;
-height: 42px;
-align-items: center;
+  display: flex;
+  height: 42px;
+  align-items: center;
 }
 
-.left_bar {
-  padding-left: 15px;
+.top_nav {
+  display: flex;
+  min-width: 1170px;
+  justify-content: space-between;
+  
 }
 
 .signup {
@@ -55,6 +60,109 @@ align-items: center;
   cursor: pointer;
   border: none;
   font-size: 12px;
+}
+
+.help {
+  color: #fff;
+  background: inherit;
+  cursor: pointer;
+  font-size: 12px;
+  border: none; 
+}
+
+.wishlist {
+  color: #fff;
+  background: inherit;
+  cursor: pointer;
+  font-size: 12px;
+  border: none; 
+}
+
+.language {
+  color: #fff;
+  background: inherit;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+}
+
+.lang_list {
+  background: #3b83d4;
+}
+
+.download_app {
+  color: #fff;
+  background: #3576be;
+  cursor: pointer;
+  font-size: 12px;
+  border: none; 
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-left: 25px;
+}
+
+.logo_text {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.form_search {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.input_wrapper input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #fcfcfc;
+  color: #9E9C9C;
+}
+
+.input_wrapper button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #ffd200;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #000103;
+}
+
+.svg-icon circle {
+  stroke: #000205;
+  stroke-width: 1;
+}
+
+.categories {
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 42px;
 }
 
 img {
