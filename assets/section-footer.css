@@ -7,8 +7,8 @@
 }
 
 .footer__content-top {
-  padding-bottom: 5rem;
-  padding-top: 5rem;
+  padding-bottom: 25px;
+  padding-top: 25px;
   display: block;
 }
 
@@ -51,6 +51,7 @@
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background-color: white;
 }
 
 .footer__content-bottom:only-child {
@@ -59,7 +60,8 @@
 
 .footer__content-bottom-wrapper {
   display: flex;
-  width: 100%;
+  padding-left: 85px;
+ width: 100%;
 }
 
 @media screen and (max-width: 749px) {
@@ -129,8 +131,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 2rem;
+}
+
+.footer_keep {
+  font-size: 13px;
+  padding-right: 18px;
 }
 
 .footer-block--newsletter:only-child {
@@ -155,8 +162,7 @@
 }
 
 .footer-block__heading {
-  margin-bottom: 2rem;
-  margin-top: 0;
+  display: flex;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
@@ -185,12 +191,14 @@
 
 @media screen and (min-width: 750px) {
   .footer-block__newsletter:not(:only-child) {
+    display: flex;
     text-align: left;
+    align-items: center;
   }
 
   .footer-block__newsletter:not(:only-child) .footer__newsletter {
     justify-content: flex-start;
-    margin: 0;
+    margin-right: 0;
   }
 
   .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
@@ -509,4 +517,208 @@ noscript .localization-selector.link {
 
 .footer .disclosure__link--active {
   text-decoration: underline;
+}
+
+.grid--2-col-tablet.grid--4-col-desktop
+    .multicolumn-list__item:nth-of-type(-n + 4) {
+    margin-top: 0;
+  }
+
+  .multicolumn_login {
+    border-top: solid 2px #d3d3d3;
+    margin-top: 0;
+}
+
+.multicolumn-list__item:nth-child(-n+3) {
+  border-right: solid 2px #d3d3d3;
+}
+
+.multicolumn-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/*FOOTER_BOTTOM*/
+.footer_bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0px;
+  justify-items: center;
+}
+
+.shop_on_app {
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo_container {
+  display: inline-flex; 
+  flex-wrap: wrap;
+}
+
+.paragraf_column {
+  color: #a8a8a8;
+  text-align: start;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ }
+ 
+ .footer_address {
+   color: #a8a8a8;
+   font-style: normal;
+   font-size: 14px;
+ }
+ 
+ .footer_phone {
+   color: #a8a8a8;
+   font-style: normal;
+   font-size: 14px;
+   text-decoration: none;
+ }
+ 
+ .footer_email {
+   color: #a8a8a8;
+   font-style: normal;
+   font-size: 14px;
+   text-decoration: none;
+ }
+ 
+ .column_company {
+   text-align: left;
+ }
+ 
+ .tittle_company {
+   color: #000;
+   text-align: left;
+   font-size: 16px;
+   padding-top: 7px;
+   padding-bottom: 29px;
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+ 
+ .company_link {
+   color: #a8a8a8;
+   font-style: normal;
+   text-align: left;
+   font-size: 14px;
+   text-decoration: none;
+ }
+ 
+ .paragraf_company {
+   margin: 0;
+   padding-top: 2px;
+   padding-bottom: 0;
+   margin-bottom: 6px;
+ }
+ 
+ .tittle_policy {
+   color: #000;
+   text-align: left;
+   font-size: 16px;
+   padding-top: 7px;
+   padding-bottom: 29px;
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+ 
+ .column_policy {
+   text-align: left;
+ }
+ 
+ .paragraf_policy {
+   margin: 0;
+   padding-top: 2px;
+   padding-bottom: 0;
+   margin-bottom: 6px;
+ }
+ 
+ .policy_link {
+   color: #a8a8a8;
+   font-style: normal;
+   text-align: left;
+   font-size: 14px;
+   text-decoration: none;
+ }
+ 
+ .tittle_policy {
+   color: #000;
+   text-align: left;
+   font-size: 16px;
+   padding-top: 7px;
+   padding-bottom: 29px;
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+ 
+ .column_account {
+   text-align: left;
+ }
+ 
+ .tittle_account {
+   color: #000;
+   text-align: left;
+   font-size: 16px;
+   padding-top: 7px;
+   padding-bottom: 29px;
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+ 
+ .paragraf_account {
+   margin: 0;
+   padding-top: 2px;
+   padding-bottom: 0;
+   margin-bottom: 6px;
+ }
+ 
+ .account_link {
+   color: #a8a8a8;
+   font-style: normal;
+   text-align: left;
+   font-size: 14px;
+   text-decoration: none;
+ }
+ 
+ .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-top: 1px solid #ececec;
+}
+ 
+.free_shipping {
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #ececec;
+}
+
+.trusted_pay {
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #ececec;
+}
+
+.secured_payment {
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #ececec;
+}
+
+.shop_on_app {
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

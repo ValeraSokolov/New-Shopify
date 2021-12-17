@@ -50,8 +50,13 @@ body {
 .nav {
   display: inline-block;
   text-decoration: none;
+  font-size: 1.2rem;
+  color: #777777;
 }
-
+.navi_number {
+  background-color: #ffd200;
+  border-radius: 1px;
+}
 .left_bar {
   padding-left: 0;
 }
@@ -336,131 +341,9 @@ img {
   margin-left: 10px;
 }
 
-
-.registered_box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
-}
-
-.customer_form {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.proplem_form {
-  display: inline-flex;
-  flex-direction: column; 
-}
-
-.title_main {
-  font-size: 22px;
-  padding-top: 83px;
-  text-transform: uppercase;
-}
-
-.tittle_registered {
-  text-transform: uppercase;
-  font-size: 20px;
-  padding-top: 8px;
-  margin-bottom: 11px;
-}
-
-
-.row {
-  display: flex;
-  margin-left: -20px;
-  margin-right: -20px;
-  flex-wrap: wrap;
-}
-
-.input {
-  display: block;
-  width: 100%;
-  padding-top: 13px;
-  padding-bottom: 12px;
-  padding-left: 14px;
-  box-sizing: border-box;
-  border: 1px solid #808997;
-  border-radius: 2px;
-}
-
-label {
-  display: block;
-  margin-bottom: 7px;
-  padding-top: 20px;
-}
-
-.login {
-  margin-top: 21px;
-  border: none;
-  border-radius: 2px;
-  background: #eeeeee;
-  color: #9f9f9f;
-  padding: 17px 26px 13px;
-  font-size: 14px;
-}
-
-.register {
-  margin-top: 21px;
-  border: none;
-  border-radius: 2px;
-  background: #eeeeee;
-  color: #9f9f9f;
-  padding: 17px 20px 12px;
-  font-size: 14px;
-}
-
-.rememmber_chek {
-  display: inline-flex;
-  font-size: 14px;
-  padding-left: 10px;
-}
-
-.checkmark {
-  padding-right: 7px;
-}
-
-.lost_password {
-  padding-top: 5px;
-  padding-bottom: 157px;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border-top: 1px solid #ececec;
-}
- 
-.free_shipping {
-  text-align: center;
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-right: 1px solid #ececec;
-}
-
-.trusted_pay {
-  text-align: center;
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-right: 1px solid #ececec;
-}
-
-.secured_payment {
-  text-align: center;
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-right: 1px solid #ececec;
-}
-
-.shop_on_app {
-  text-align: center;
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
+.nav_link {
+  text-decoration: none;
+  color: #777777;
 }
 
 /*STILE-OPTION*/

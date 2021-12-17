@@ -130,67 +130,7 @@
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
-      <div class="container">
-        <h2 class="title_main">My Account</h2>
-        <div class="registered_box">
-          <div class="customer_form">
-            <form action="#" method="post" name="form">
-              <h2 class="tittle_registered">Registered Customer</h2>
-                <div class="">
-                  <label for="input1">Username or email *</label>
-                  <input class="input" id="input1" name="username" type="text" size="30" placeholder="" required>
-                </div>
-                <div class="">
-                  <label for="input1">Password *</label>
-                  <input class="input" id="input1" name="password" type="password" maxlength="10" size="30" placeholder="" required>
-                  <input class="login" type="submit" value="LOGIN">
-                  <label class="rememmber_chek">
-                    <input type="checkbox">
-                    <span class="checkmark"></span> Rememmber Me
-                  </label>
-                  <p class="lost_password">Lost your password</p>
-                </div>
-          </form>
-        </div>
-          <div class="proplem_form">
-            <form action="#" method="post" name="form">
-                <h2 class="tittle_registered">Not Registered? No Proplem</h2>
-                  <div class="">
-                    <label for="input2">Email *</label>
-                    <input class="input" id="input2" type="text" name="email" size="30" placeholder="" required>
-                  </div>
-                  <div class="">
-                    <label for="input2">Password *</label>
-                    <input class="input" id="input2" name="password" type="password" maxlength="10"  size="30" placeholder="" required> </div>
-                    <input class="register" type="submit" value="REGISTER">
-                  </div>
-              </form>
-            </div>
-        </div>
-      </div>
-      <div class="features container">
-          <div class="free_shipping">
-            <img src="img/free-shipping.png" width="48" height="47" alt="Free Shipping">
-            
-            <h4 class="title_free-shipping">FREE SHIPPING</h4>
-            <p class="text_free-shipping">Free Shipping on World wide Order Over $99.</p>
-          </div>
-          <div class="trusted_pay">
-            <img src="img/trusted-pay.png" width="39" height="54" alt="Trusted Pay">
-            <h4 class="title_trusted_pay">TRUSTED PAY</h4>
-            <p class="text_trusted_pay">100% Payment Protection &  Easy Return</p>
-          </div>
-          <div class="secured_payment">
-            <img src="img/secured-payment.png" width="54" height="49" alt="Secured Payment">
-            <h4 class="title_secured_payment">SECURED PAYMENT</h4>
-            <p class="text_secured_payment">All Major Credit & Debit Cards Accepted</p>
-          </div>
-          <div class="shop_on_app">
-            <img src="img/shop-on-app.png" width="37" height="52" alt="Shop on app">
-            <h4 class="title_shop_on_app">SHOP ON APP</h4>
-            <p class="text_shop_on_app">Just Dowload our App & Shop  With Best Offers!</p>
-          </div>
-      </div>
+      
     </main>
 
     {% section 'footer' %}
@@ -198,7 +138,7 @@
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
-
+   
     <script>
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',

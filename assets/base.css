@@ -2,7 +2,7 @@
 
 :root,
 .color-background-1 {
-  --color-foreground: var(--color-base-text);
+  /*--color-foreground: var(--color-base-text);*/
   --color-background: var(--color-base-background-1);
   --gradient-background: var(--gradient-base-background-1);
 }
@@ -177,6 +177,7 @@ html.no-js .no-js-hidden {
   padding: 0 1.5rem;
 }
 
+
 .page-width-desktop {
   padding: 0;
   margin: 0 auto;
@@ -185,6 +186,7 @@ html.no-js .no-js-hidden {
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
+    
   }
 
   .page-width--narrow {
@@ -1116,7 +1118,7 @@ summary::-webkit-details-marker {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  /**width: 100%;**/
 }
 
 .media > img {
@@ -1168,8 +1170,7 @@ deferred-media {
 /* Button - default */
 
 .button,
-.shopify-challenge__button,
-.customer button {
+.shopify-challenge__button {
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -1393,9 +1394,9 @@ details[open] > .share-button__fallback {
 .customer select {
   -webkit-appearance: none;
   appearance: none;
-  background-color: transparent;
+  /**background-color: transparent;**/
   border: 0.1rem solid transparent;
-  border-radius: 0;
+  border-radius: 2px;
   color: rgb(var(--color-foreground));
   font-size: 1.6rem;
   width: 100%;
@@ -1488,7 +1489,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: #c6c6c6;
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -1500,7 +1501,7 @@ details[open] > .share-button__fallback {
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
   font-size: 1rem;
-  top: 0.3em;
+  top: 15px;
   letter-spacing: 0.04rem;
 }
 
@@ -1525,19 +1526,21 @@ details[open] > .share-button__fallback {
 
 .field__button {
   align-items: center;
-  background-color: transparent;
+  background-color: #ffd200;
   border: 0;
-  color: currentColor;
+  border-radius: 2px;
+  /*color: currentColor;*/
+  font-weight: bold;
   cursor: pointer;
   display: flex;
-  height: 4.4rem;
+  height: 4.5rem;
   justify-content: center;
   overflow: hidden;
   padding: 0;
   position: absolute;
   right: 0;
   top: 0;
-  width: 4.4rem;
+  width: 10rem;
 }
 
 .field__button > svg {

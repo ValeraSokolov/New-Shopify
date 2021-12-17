@@ -19,7 +19,10 @@
   align-items: center;
   display: flex;
   padding: 1.3rem;
-  color: rgb(var(--color-foreground));
+  margin-right: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .list-social__link:hover .icon {
