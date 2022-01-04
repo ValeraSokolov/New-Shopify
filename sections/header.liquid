@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="{{ 'header.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -120,11 +121,58 @@
     </div>
     {%- if section.settings.menu != blank -%}
     <div class="navigation_items">
-      <div class="bottom_header container">
-    <div class="departments_burger">
+   <div class="bottom_header container">
+    <!--<div class="departments_burger">
       <button type="button" class="burger">Departments<span></span></button>
-    </div>
-    <div class="navigation_list">
+    </div>-->
+    <header-drawer data-breakpoint="tablet"> 
+      <details class="burger menu-drawer-container menu-opening">
+        <h3 class="burger_name">DEPARTMENS</h3>
+        <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="Menu" role="button" aria-expanded="false" aria-controls="menu-drawer">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" fill="none" viewBox="0 0 18 16">
+            <path d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z" fill="currentColor">
+            </path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+            <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+            </path></svg>
+          </span>
+        </summary>
+        <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
+          <div class="menu-drawer__inner-container">
+            <div class="menu-drawer__navigation-container">
+              <nav class="nav_bottom menu-drawer__navigation">
+                <ul class="bottom_bar menu-drawer__menu list-menu" role="list"><li><a href="/" class="menu-drawer__menu-item list-menu__item link link--text focus-inset menu-drawer__menu-item--active" aria-current="page">
+                          Home
+                        </a></li><li><a href="/collections/all" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          Shop
+                        </a></li><li><a href="/pages/contact" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          Fashion
+                        </a></li><li><a href="#" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                           Electronics
+                        </a></li><li><a href="#" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          Page
+                        </a></li><li><a href="#" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          Fiatures
+                        </a></li><li><a href="#" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          Blog
+                        </a></li><li><a href="#" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          Call US Free:
+                        </a></li><li><a href="tel:1-800-777-7889" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                          1-800-777-7889
+                        </a></li></ul>
+              </nav>
+              <!--<div class="menu-drawer__utility-links"><a href="/account/login" class="menu-drawer__account link focus-inset h5">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-account" fill="none" viewBox="0 0 18 19">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
+                    </path>
+                  </svg>Log in</a><ul class="list list-social list-unstyled" role="list"></ul>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </details>
+    </header-drawer>
       <nav class="nav_bottom">
         <ul class="bottom_bar" role="list">
           {%- for link in section.settings.menu.links -%}
@@ -163,8 +211,7 @@
                         </li>
                       {%- endfor -%}
                     </ul>
-                  </details>
-                </details-disclosure>
+                  
               {%- else -%}
                 <a href="{{ link.url }}" class="navi_link"{% if link.current %} aria-current="page"{% endif %}>
                   {{ link.title | escape }}
@@ -175,6 +222,8 @@
         </ul>
       </nav>
     </div>
+    </details>
+    <header-drawer>
     {%- endif -%}
   </div>
 </div>  

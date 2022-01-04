@@ -18,7 +18,7 @@
 <div class="blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
   <div class="page-width-desktop{% if posts_displayed < 3 %} page-width-tablet{% endif %}">
     <div class="title-wrapper-with-link{% if section.settings.heading == blank %} title-wrapper-with-link--no-heading{% endif %} {% if posts_displayed > 2 %}title-wrapper--self-padded-tablet-down{% else %}title-wrapper--self-padded-mobile{% endif %}">
-      <h2 class="blog__title">{{ section.settings.heading | escape }}</h2>
+     
 
       {%- if section.settings.blog != blank and section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
         <a href="{{ section.settings.blog.url }}"
@@ -53,7 +53,7 @@
           </div>
         {%- endif -%}
       </slider-component>
-
+     
       {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
         <div class="blog__view-all center small-hide medium-hide">
           <a href="{{ section.settings.blog.url }}" class="blog__button button">
@@ -62,19 +62,41 @@
         </div>
       {%- endif -%}
     {%- else -%}
+    
+    <div class="blog_container">
       <div class="blog-placeholder">
-        <div class="placeholder media media--landscape">
+        <div class="placeholder media media--landscape col-9">
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
-        <div class="blog-placeholder__content">
-          <h2>
-            {{ 'sections.featured_blog.onboarding_title' | t }}
-          </h2>
-          <p class="rte-width">
-            {{ 'sections.featured_blog.onboarding_content' | t }}
-          </p>
+        <div class="post_box col-9">
+          <div class="post_date">
+            <p class="date_number_post">24</p>
+            <p class="month_date_post">DEC</p>
+          </div>
+         <div class="blog-placeholder__content">
+          <h2 class="blog__title">{{ section.settings.heading | escape }}</h2>
+          
+          <ul class="post_link">
+            <li class="nav">
+              <button class="clothing">In Fashion, Clothing</button>
+            </li>
+            <li class="nav">
+              <button class="no_comments">No Comments</button>
+            </li>
+            <li class="nav">
+                <button class="hen_whitman">Hen whitman</button>
+            </li>
+          </ul>
+          <h3 class="rte-width">
+            The Love Boat soon will be making another run. The Love Boat promises something for everyone., Just two 
+            good old boys Wouldn't change if they could. Fightin' the system like a true modern day Robin Hood. That this 
+            group would somehow form a family that's the way we all became the Brady Bunch...
+          </h3>
+          <p class="continue_post">CONTINUE READING</p>
         </div>
       </div>
+    </div>
+  </div>
     {%- endif -%}
   </div>
 </div>

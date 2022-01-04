@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -42,7 +42,7 @@ body {
 
 .top_nav {
   display: flex;
-  min-width: 1170px;
+  width: 100%;
   justify-content: space-between;
   padding-top: 5px;
 }
@@ -241,18 +241,21 @@ img {
 
 .navigation_items {
   justify-content: space-between;
-  height: 54px;
   background: #408de4;
+}
+
+ .navi a[href^="tel:"] {
+  background-color: #ffd200;
+  padding: 2px 5px 2px;
+  border-radius: 2px;
 }
 
 .bottom_header {
   display: flex;
-  max-width: 1170px;
 }
 
 .burger {
   position: relative;
-  height: 54px;
   background: #ffd200;
   border: none;
   text-transform: uppercase;
@@ -260,11 +263,29 @@ img {
   text-align: start;
   padding-left: 20px;
   padding-right: 145px;
+  padding-top: 0;
+  padding-bottom: 13px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   cursor: pointer;
   z-index: 2;
 }
 
-.burger span, 
+.menu-drawer__navigation {
+  background-color: black;
+  color: white;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.burger_name {
+  display: inline-flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  margin-top: 0
+}
+
+/*.burger span, 
 .burger span:before, 
 .burger span:after{
   width: 13px;
@@ -310,11 +331,13 @@ img {
 
 .burger-active span{
   background: rgba(255, 255, 255, 0);
-}
+}*/
 
 .bottom_bar {
   padding-left: 29px;
+  list-style: none;
 }
+
 
 .navi_link {
   cursor: pointer;

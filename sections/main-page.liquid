@@ -5,9 +5,12 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="page-width page-width--narrow">
-  <h1 class="main-page-title page-title h0">
+  <h3 class="main-page-title page-title h0">
     {{ page.title | escape }}
-  </h1>
+  </h3>
+  <div class="link_baner">
+  <p class="pagination_link">HOME/ABOUT US</p>
+  </div>
   <div class="rte">
     {{ page.content }}
   </div>

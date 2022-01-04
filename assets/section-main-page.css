@@ -2,10 +2,6 @@
   margin-top: 0;
 }
 
-.main-page-title {
-  margin-bottom: 3rem;
-}
-
 @media screen and (min-width: 750px) {
   .main-page-title {
     margin-bottom: 4rem;
@@ -20,4 +16,14 @@
 .page-placeholder {
   width: 52.5rem;
   height: 52.5rem;
+}
+
+.main-page-title {
+  margin: 0;
+  font-size: 3.2rem;
+  color: white;
+}
+
+.pagination_link {
+  color: white;
 }

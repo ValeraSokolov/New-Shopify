@@ -128,10 +128,17 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
     {% section 'header' %}
+   
+      
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
       
     </main>
+
+    {% section "sidebar" %}    
+
+    {% section 'multicolumn-footer' %}
 
     {% section 'footer' %}
 
@@ -165,6 +172,10 @@
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'main.js.liquid' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
 </html>

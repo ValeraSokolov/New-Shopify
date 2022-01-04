@@ -5,10 +5,14 @@
 }
 
 .rte > p:first-child {
+  font-size: 1.4rem;
+  color: #555555;
   margin-top: 0;
 }
 
 .rte > p:last-child {
+  font-size: 1.4rem;
+  color: #777777;
   margin-bottom: 0;
 }
 

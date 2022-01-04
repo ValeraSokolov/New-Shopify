@@ -185,7 +185,7 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0;
     
   }
 
@@ -204,9 +204,14 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 990px) {
   .page-width--narrow {
-    max-width: 72.6rem;
-    padding: 0;
-  }
+    display: flex;
+    padding-bottom: 50px;
+    background-color: #686868;
+    padding-top: 50px;
+    padding-left: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
 
   .page-width-desktop {
     max-width: var(--page-width);
@@ -232,7 +237,7 @@ html.no-js .no-js-hidden {
   }
 
   .spaced-section {
-    margin-top: calc(5rem + var(--page-width-margin));
+    margin-top: calc(3.9rem + var(--page-width-margin));
   }
 
   .spaced-section:last-child {
@@ -875,7 +880,12 @@ summary::-webkit-details-marker {
   }
 
   .title--primary {
-    margin: 2rem 0;
+    padding-left: 13px;
+    background-color: #a6a6a6;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    font-size: 3.2rem;
   }
 
   .title-wrapper-with-link {
@@ -1115,10 +1125,8 @@ summary::-webkit-details-marker {
   display: block;
   max-width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
-  /**width: 100%;**/
+ 
 }
 
 .media > img {
@@ -1136,7 +1144,7 @@ summary::-webkit-details-marker {
 }
 
 .media--landscape {
-  padding-bottom: 66.6%;
+  padding-bottom: 50%;
 }
 
 .media--cropped {
@@ -2086,6 +2094,8 @@ details[open] .modal-overlay::after {
 .header__icon--menu .icon {
   display: block;
   position: absolute;
+  top: 25px;
+  right: 25px;
   opacity: 1;
   transform: scale(1);
   transition: transform 150ms ease, opacity 150ms ease;
