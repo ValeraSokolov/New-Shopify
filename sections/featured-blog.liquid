@@ -11,6 +11,7 @@
 {%- liquid
   assign posts_displayed = section.settings.blog.articles_count
   if section.settings.post_limit <= section.settings.blog.articles_count
+    
     assign posts_exceed_limit = true
     assign posts_displayed = section.settings.post_limit
   endif
@@ -62,7 +63,6 @@
         </div>
       {%- endif -%}
     {%- else -%}
-    
     <div class="blog_container">
       <div class="blog-placeholder">
         <div class="placeholder media media--landscape col-9">

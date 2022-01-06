@@ -37,66 +37,33 @@
         <h2 class="sidebar_tittle">CATEGORIES</h2>
         </div>
       </ul>
+      <ul class="list_sidebar">
+      <li class="categories_list">Creative</li>
+      <li class="categories_list">Shopping</li>
+      </ul>
     </div>
     <hr class="medium-up--hide hr--small {% if request.page_type == 'index' %}hr--border-bottom{% endif %}">
   </nav>
 </div>
 
-
-
 {% schema %}
 {
   "name": {
-    "cs": "Postranní lišta",
-    "da": "Sidebjælke",
-    "de": "Seitenleiste",
-    "en": "Sidebar",
-    "es": "Barra lateral",
-    "fi": "Sivupalkki",
-    "fr": "Barre latérale",
-    "it": "Sidebar",
-    "ja": "サイドバー",
-    "ko": "사이드바",
-    "nb": "Sidefelt",
-    "nl": "Zijbalk",
-    "pl": "Pasek boczny",
-    "pt-BR": "Barra Lateral",
-    "pt-PT": "Barra lateral",
-    "sv": "Sidofält",
-    "th": "แถบด้านข้าง",
-    "tr": "Kenar çubuğu",
-    "vi": "Thanh bên",
-    "zh-CN": "侧边栏",
-    "zh-TW": "側邊欄"
+    "en": "Sidebar"
   },
   "settings": [
     {
       "type": "link_list",
       "id": "main_menu_link_list",
       "label": {
-        "cs": "Nabídka",
-        "da": "Menu",
-        "de": "Menü",
-        "en": "Menu",
-        "es": "Menú",
-        "fi": "Valikko",
-        "fr": "Menu",
-        "it": "Menu",
-        "ja": "メニュー",
-        "ko": "메뉴",
-        "nb": "Meny",
-        "nl": "Menu",
-        "pl": "Menu",
-        "pt-BR": "Menu",
-        "pt-PT": "Menu",
-        "sv": "Meny",
-        "th": "เมนู",
-        "tr": "Menü",
-        "vi": "Menu",
-        "zh-CN": "菜单",
-        "zh-TW": "選單"
+        "en": "Menu"
       },
       "default": "main-menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sidebar"
     }
   ]
 }

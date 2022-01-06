@@ -1464,6 +1464,23 @@ details[open] > .share-button__fallback {
   padding: 0 4rem 0 1.5rem;
 }
 
+.sidebar_search {
+  display: block;
+  height: 37px;
+  padding-left: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  outline: 0;
+  background: #fcfcfc;
+  color: #9e9c9c;
+}
+
+.categories_list {
+  color: #686868;
+  list-style: none;
+  border-bottom: 1px solid #9e9c9c;
+}
+
 /* Field */
 
 .field {
