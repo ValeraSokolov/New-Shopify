@@ -1,5 +1,5 @@
 <div data-section-id="{{ section.id }}" data-section-type="sidebar-section">
-  <nav class="grid__item small--text-center medium-up--one-fifth" role="navigation">
+  <nav class="sidebar__item small--text-center medium-up--one-fifth" role="navigation">
     <hr class="hr--small medium-up--hide">
     <div id="SiteNav" class="site-nav" role="menu">
       <ul class="list--nav">
@@ -36,10 +36,36 @@
           </div>
         <h2 class="sidebar_tittle">CATEGORIES</h2>
         </div>
-      </ul>
-      <ul class="list_sidebar">
-      <li class="categories_list">Creative</li>
-      <li class="categories_list">Shopping</li>
+        {% for link in menus[section.settings.main_menu_link_list].links %}
+          {% if link.links != blank %}
+          {% else %}
+            <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
+              <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <h2 class="sidebar_tittle">RECENT POSTS</h2>
+        <p class="recent_post">Tour of Envato’s Melbourne Head
+        quarters</p>
+        <p class="recent_date_post">December 28, 2016</p>
+        <p class="recent_post">Echo Three to Echo Seven</p>
+        <p class="recent_date_post">December 28, 2016</p>
+        <p class="recent_post">Oh, Princess Leia, are you all right?</p>
+        <p class="recent_date">December 28, 2016</p>
+        <h2 class="sidebar_tittle">ARCHIVES</h2>
+        <li class="categories_list">November 2016</li>
+        <li class="categories_list">December 2016</li>
+        <li class="categories_list">January 2017</li>
+        <h2 class="sidebar_tittle">TAGS</h2>
+        <li class="tags_link">
+          <a class="link_tags">Lookbook</a>
+          <a class="link_tags">Electronics</a>
+        </li>
+        <li class="tags_link">
+          <a class="link_tags">News</a>
+          <a class="link_tags">Innovative</a>
+          <a class="link_tags">Envato</a>
+        </li>
       </ul>
     </div>
     <hr class="medium-up--hide hr--small {% if request.page_type == 'index' %}hr--border-bottom{% endif %}">
