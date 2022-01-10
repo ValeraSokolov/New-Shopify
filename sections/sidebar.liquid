@@ -36,7 +36,7 @@
           </div>
         <h2 class="sidebar_tittle">CATEGORIES</h2>
         </div>
-        {% for link in menus[section.settings.main_menu_link_list].links %}
+        {% for link in section.settings.main_menu_link_list.links %}
           {% if link.links != blank %}
           {% else %}
             <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
@@ -53,9 +53,12 @@
         <p class="recent_post">Oh, Princess Leia, are you all right?</p>
         <p class="recent_date">December 28, 2016</p>
         <h2 class="sidebar_tittle">ARCHIVES</h2>
-        <li class="categories_list">November 2016</li>
-        <li class="categories_list">December 2016</li>
-        <li class="categories_list">January 2017</li>
+        <li class="categories_list">
+          <a href="#" class="categories_link">November 2016</a></li>
+        <li class="categories_list">
+          <a href="#" class="categories_link">December 2016</a></li>
+        <li class="categories_list">
+          <a href="#" class="categories_link">January 2017</a></li>
         <h2 class="sidebar_tittle">TAGS</h2>
         <li class="tags_link">
           <a href="#" class="link_tags">Lookbook</a>

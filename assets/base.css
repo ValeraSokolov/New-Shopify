@@ -1521,6 +1521,10 @@ details[open] > .share-button__fallback {
   border-bottom: 1px solid #9e9c9c;
 }
 
+.categories_list:last-child {
+  border-bottom: none;
+}
+
 .tags_link {
   list-style: none;
   color: #686868;
@@ -1533,10 +1537,6 @@ details[open] > .share-button__fallback {
   border-radius: 2px;
   border: 1px solid #9e9c9c;
   padding: 3px;
-}
-
-.categories_list:last-of-type {
-    border-bottom: none;
 }
 
 /* Field */
