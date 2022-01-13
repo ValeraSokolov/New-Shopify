@@ -68,8 +68,9 @@
           "7aff1268-f6f5-4107-84de-6dd8817b0f46": {
             "type": "column",
             "settings": {
-              "title": "Column",
-              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+              "image": "shopify:\/\/shop_images\/shop-on-app.png",
+              "title": "SHOP ON APP",
+              "text": "<p>Just Dowload our App & Shop <br\/>With Best Offers!<\/p>"
             }
           }
         },
