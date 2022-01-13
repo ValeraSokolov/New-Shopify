@@ -132,6 +132,10 @@
   font-weight: bold;
 }
 
+.sidebar_tittle {
+  font-weight: bold;
+}
+
 .sidebar_list {
   list-style: none;
   border-bottom: 2px solid #d0d0d0 ;
@@ -194,6 +198,7 @@
 }
 
 .blog__title {
+  font-weight: bold;
   margin: 0;
 }
 

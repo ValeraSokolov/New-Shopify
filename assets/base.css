@@ -27,7 +27,7 @@
 .color-accent-2 {
   --color-foreground: var(--color-base-solid-button-labels);
   --color-background: var(--color-base-accent-2);
-  --gradient-background: var(--gradient-base-accent-2);
+  --gradient-background: #408de4;
 }
 
 .color-foreground-outline-button {
@@ -1521,7 +1521,7 @@ details[open] > .share-button__fallback {
   border-bottom: 1px solid #9e9c9c;
 }
 
-.categories_list:last-child {
+.categories_list:nth-last-child(1) {
   border-bottom: none;
 }
 
@@ -1538,6 +1538,8 @@ details[open] > .share-button__fallback {
   border: 1px solid #9e9c9c;
   padding: 3px;
 }
+
+
 
 /* Field */
 
