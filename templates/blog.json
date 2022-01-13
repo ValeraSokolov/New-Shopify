@@ -84,7 +84,7 @@
     "1642071201436e06e0": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": ""
+        "custom_liquid": "<div class=\"pagination_sidebar\">\n    <a class=\"pagination_link_one\">1<\/a>\n    <a class=\"pagination_link\">2<\/a>\n    <a class=\"pagination_link\">&gt;<\/a>\n    <\/div>"
       }
     }
   },
