@@ -40,15 +40,52 @@
       },
       "multicolumn-footer": {
         "type": "multicolumn-footer",
+        "blocks": {
+          "57bcd3c7-1192-444b-80d4-6512a8caacbd": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/free-shipping.png",
+              "title": "FREE SHIPPING",
+              "text": "<p>Free Shipping on World wide Order<br\/>Over $99.<\/p>"
+            }
+          },
+          "ea59ccf7-c658-4e98-8abe-1f10778fc1e0": {
+            "type": "column",
+            "settings": {
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            }
+          },
+          "bf814ff0-19b6-4e5f-9b63-aea18ede5ad9": {
+            "type": "column",
+            "settings": {
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            }
+          },
+          "7aff1268-f6f5-4107-84de-6dd8817b0f46": {
+            "type": "column",
+            "settings": {
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "57bcd3c7-1192-444b-80d4-6512a8caacbd",
+          "ea59ccf7-c658-4e98-8abe-1f10778fc1e0",
+          "bf814ff0-19b6-4e5f-9b63-aea18ede5ad9",
+          "7aff1268-f6f5-4107-84de-6dd8817b0f46"
+        ],
         "settings": {
-          "title": "Multicolumn",
-          "image_width": "full",
+          "title": "",
+          "image_width": "third",
           "image_ratio": "adapt",
-          "column_alignment": "left",
-          "background_style": "primary",
-          "button_label": "Button label",
+          "column_alignment": "center",
+          "background_style": "none",
+          "button_label": "",
           "button_link": "",
-          "swipe_on_mobile": false
+          "swipe_on_mobile": true
         }
       },
       "footer": {
