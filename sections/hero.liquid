@@ -1,0 +1,75 @@
+<div class="hero__wrapper" >
+  <img class="hero__image"
+      srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | img_url: '3000x' }} 3000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | img_url: '3840x' }} 3840w,{%- endif -%}
+          {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
+      sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+      src="{{ section.settings.image | img_url: '1500x' }}"
+      loading="lazy"
+      alt="{{ section.settings.image.alt | escape }}"
+      width="{{ section.settings.image.width }}"
+      height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+      {% if section.settings.image_2 != blank %}class="banner__media-image-half"{% endif %}
+  >
+
+  <div class="hero__container page-width">
+    <h1 class="hero__title">{{ blog.title }}</h1>
+
+    <div class="breadcrumbs">breadcrumbs</div>
+  </div>
+</div>
+
+<style>
+  .hero__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  .hero__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero__title {
+    color: #fff;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "hero",
+  "tag": "section",
+  "class": "hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero"
+    }
+  ]
+}
+{% endschema %}
