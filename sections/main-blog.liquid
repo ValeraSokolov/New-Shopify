@@ -67,7 +67,6 @@
               {% if block.settings.categories_title != blanck %}
                 <h3 class="sidebar_tittle">{{ block.settings.categories_title | escape }}</h3>
               {% endif %}
-            {% else %}
               {% for link in section.settings.main_menu_link_list.links %}
                 {% if link.links != blank %}
                 {% else %}
@@ -76,6 +75,7 @@
                   </li>
                 {% endif %}
               {% endfor %}
+            {% else %}
           {% endcase %}
         {%- endfor -%}
       </div>
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "type": "sidebar_list",
+      "type": "sidebar",
       "name": "Sidebar",
       "settings": [
         {
