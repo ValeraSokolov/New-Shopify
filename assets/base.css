@@ -179,13 +179,11 @@ html.no-js .no-js-hidden {
 
 
 .page-width-desktop {
-  padding: 0;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0;
     
   }
 
@@ -193,9 +191,6 @@ html.no-js .no-js-hidden {
     padding: 0 9rem;
   }
 
-  .page-width-desktop {
-    padding: 0;
-  }
 
   .page-width-tablet {
     padding: 0 5rem;
@@ -866,6 +861,10 @@ summary::-webkit-details-marker {
   padding-right: 1.5rem;
 }
 
+.title_contact {
+  color: white;
+}
+
 @media screen and (min-width: 750px) {
   .title-wrapper--self-padded-mobile {
     padding-left: 0;
@@ -952,7 +951,7 @@ summary::-webkit-details-marker {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
   width: calc(25% - 0.5rem * 3 / 4);
-  max-width: 50%;
+  max-width: 100%;
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -964,18 +963,7 @@ summary::-webkit-details-marker {
     padding-bottom: 1rem;
     width: calc(20% - 1rem * 3 / 4);
     max-width: 50%;
-    padding-top: 15px;
   }
-}
-
-.sidebar__item {
-  margin-right: 80px;
-  float: right;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  width: calc(20% - 1rem * 3 / 4);
-  max-width: 50%;
-  padding-top: 15px;
 }
 
 .recent_post {
@@ -1902,7 +1890,10 @@ input[type='checkbox'] {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
-
+.main-blog {
+  padding-left: 100px;
+  padding-top: 80px;
+}
 
 @media screen and (min-width: 990px) {
   

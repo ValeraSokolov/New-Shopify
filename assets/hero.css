@@ -1,0 +1,32 @@
+.hero__wrapper {
+  position: relative;
+  overflow: hidden;
+  top: 58px;
+}
+
+.hero__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.hero__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.hero__title {
+    padding-top: 20px;
+    color: #fff;
+    padding-bottom: 20px;
+}

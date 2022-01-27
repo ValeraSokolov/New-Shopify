@@ -1,23 +1,85 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'base.css' | asset_url | stylesheet_tag }}
+{{ 'collage.css' | asset_url | stylesheet_tag }}
 
-
-{%- paginate blog.articles by 6 -%}
+{%- paginate blog.articles by 5 -%}
 
   <div class="main-blog page-width">
-    <h1 class="title--primary">{{ blog.title | escape }}</h1>
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div class="blog-articles__article article">
-          {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+    <div class="grid">
+      <div class="main-blog__content grid--9-col">
+        <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+          {%- for article in blog.articles -%}
+            <div class="blog-articles__article article">
+              {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+            </div>
+          {%- endfor -%}
         </div>
-      {%- endfor -%}
-    </div>
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+      </div>
+
+      <div class="sidebar grid--3-col grid__item">
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {% when 'sidebar_search' %}
+              {% if block.settings.search_title != blanck %}
+                <h3 class="visually-hidden">{{ block.settings.search_title | escape }}</h3>
+              {% endif %}
+
+              <form action="{{ routes.search_url }}" method="get" role="search" class="form_search">
+                <div class="field">
+                  <input class="sidebar_search"
+                         id="Search-In-Modal"
+                         type=""
+                         name="q"
+                         value=""
+                         placeholder="{{ 'general.search.search' | t }}"
+                      {%- if settings.predictive_search_enabled -%}
+                        role="combobox"
+                        aria-expanded="false"
+                        aria-owns="predictive-search-results-list"
+                        aria-controls="predictive-search-results-list"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocorrect="off"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                      {%- endif -%}
+                  >
+                  <input type="hidden" name="options[prefix]" value="last">
+                  <button aria-label="{{ 'general.search.search' | t }}">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                      <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+                      c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+                      c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+                      s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+
+             {% when 'sidebar_categories' %}
+              {% if block.settings.categories_title != blanck %}
+                <h3 class="sidebar_tittle">{{ block.settings.categories_title | escape }}</h3>
+              {% endif %}
+            {% else %}
+              {% for link in section.settings.main_menu_link_list.links %}
+                {% if link.links != blank %}
+                {% else %}
+                  <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
+                    <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+          {% endcase %}
+        {%- endfor -%}
+      </div>
+    </div>
   </div>
 {%- endpaginate -%}
 
@@ -93,6 +155,44 @@
     {
       "type": "paragraph",
       "content": "t:sections.main-blog.settings.paragraph.content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sidebar_search",
+      "name": "Sidebar search",
+      "settings": [
+        {
+          "type": "text",
+          "id": "search_title",
+          "default": "search form",
+          "label": "Search title"
+        }
+      ]
+    },
+    {
+      "type": "sidebar_list",
+      "name": "Sidebar",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "main_menu_link_list",
+          "label": "Menu",
+          "default": "main-menu"
+        }
+      ]
+    },
+    {
+      "type": "sidebar_categories",
+      "name": "Sidebar Categories",
+      "settings": [
+        {
+          "type": "text",
+          "id": "categories_title",
+          "default": "Categories",
+          "label": "Categories title"
+        }
+      ]
     }
   ]
 }

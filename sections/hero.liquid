@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="{{ 'hero.css' | asset_url }}" media="print" onload="this.media='all'">
+<div class="hero__wrapper" >
+  <img class="hero__image"
+      srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | img_url: '3000x' }} 3000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | img_url: '3840x' }} 3840w,{%- endif -%}
+          {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
+      sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+      src="{{ section.settings.image | img_url: '1500x' }}"
+      loading="lazy"
+      alt="{{ section.settings.image.alt | escape }}"
+      width="{{ section.settings.image.width }}"
+      height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+      {% if section.settings.image_2 != blank %}class="banner__media-image-half"{% endif %}
+  >
+
+  <div class="hero__container page-width">
+    <h1 class="hero__title">{{ blog.title }}</h1>
+
+    <div class="breadcrumbs">
+    {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+      {%- assign t = template | split: '.' | first -%}
+      
+      <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/">Home</a>
+          </li>
+          {%- case t -%}
+            {%- when 'page' -%}
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+              </li>
+            {%- when 'product' -%}
+              {%- if collection.url -%}
+                <li class="breadcrumbs__item">
+                  {{ collection.title | link_to: collection.url }}
+                </li>
+              {%- endif -%}
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+              </li>
+            {%- when 'collection' and collection.handle -%}
+              {%- if current_tags -%}
+                <li class="breadcrumbs__item">
+                  {{ collection.title | link_to: collection.url }}
+                </li>
+                <li class="breadcrumbs__item">
+                  {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                  <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+                </li>
+              {%- else -%}
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+                </li>
+              {%- endif -%}
+            
+            {%- when 'article' -%}
+              <li class="breadcrumbs__item">
+                {{ blog.title | link_to: blog.url }}
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+              </li>
+            {%- else -%}
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+              </li>
+          {%- endcase -%}
+        </ol>
+      </nav>
+      {%- endunless -%}
+  </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "hero",
+  "tag": "section",
+  "class": "hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero"
+    }
+  ]
+}
+{% endschema %}
