@@ -12,8 +12,12 @@
 
 .pagination__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  margin-left: 10px;
+  padding-top: 35px;
+  width: 100%;
+  border-top: 2px solid #e8e8e8;
+  align-items: center;
 }
 
 .pagination__list > li {
@@ -26,15 +30,43 @@
 }
 
 .pagination__item {
-  color: rgb(var(--color-foreground));
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 4.4rem;
-  width: 100%;
-  padding: 0;
+  padding: 5px 15px 5px;
   text-decoration: none;
+  color: #9e9c9c;
+  border: 1px solid #9e9c9c;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+/*PAGINATION_SIDEBAR*/
+.pagination_sidebar {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  padding-top: 35px;
+  width: 56%;
+  border-top: 2px solid #e8e8e8;
+}
+
+.pagination_link {
+  padding: 5px 15px 5px;
+  text-decoration: none;
+  color: #9e9c9c;
+  border: 1px solid #9e9c9c;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+.pagination_link_one {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  border: 1px solid #9e9c9c;
+  border-radius: 3px;
 }
 
 a.pagination__item:hover::after {
@@ -51,7 +83,7 @@ a.pagination__item:hover::after {
 
 .pagination__item--current::after,
 .pagination__item:hover::after {
-  content: '';
+  
   display: block;
   width: 2rem;
   position: absolute;

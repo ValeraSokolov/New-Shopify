@@ -4,7 +4,7 @@
 {{ 'base.css' | asset_url | stylesheet_tag }}
 {{ 'collage.css' | asset_url | stylesheet_tag }}
 
-{%- paginate blog.articles by 5 -%}
+{%- paginate blog.articles by 4 -%}
 
   <div class="main-blog page-width">
     <div class="grid">
@@ -67,6 +67,7 @@
               {% if block.settings.categories_title != blanck %}
                 <h3 class="sidebar_tittle">{{ block.settings.categories_title | escape }}</h3>
               {% endif %}
+              {% when 'main_menu_link_list' %}
               {% for link in section.settings.main_menu_link_list.links %}
                 {% if link.links != blank %}
                 {% else %}
@@ -75,6 +76,7 @@
                   </li>
                 {% endif %}
               {% endfor %}
+              
             {% else %}
           {% endcase %}
         {%- endfor -%}
@@ -171,8 +173,8 @@
       ]
     },
     {
-      "type": "sidebar",
-      "name": "Sidebar",
+      "type": "sidebar-manu",
+      "name": "Sidebar-manu",
       "settings": [
         {
           "type": "link_list",
