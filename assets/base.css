@@ -1502,6 +1502,7 @@ details[open] > .share-button__fallback {
 }
 
 .categories_list {
+  width: 50%;
   padding-bottom: 5px;
   padding-top: 5px;
   color: #686868;
