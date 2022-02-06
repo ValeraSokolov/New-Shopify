@@ -37,17 +37,28 @@
         </div>
       </div>
     {%- endif -%}
-
     <div class="article-card__info">
       <header class="article-card__header">
-        <h2 class="article-card__title" id="Article-{{ article.id }}">
-          {{ article.title | escape }}
-        </h2>
-        {%- if show_date -%}
-          <span class="post_date caption-with-letter-spacing">
-            {{- article.published_at | time_tag: format: 'date' -}}
-          </span>
-        {%- endif -%}
+        <div class="card_title">
+          {%- if show_date -%}
+            <span class="post_date caption-with-letter-spacing">
+              {{ article.published_at | date: "%d %b" }}
+            </span>
+          {%- endif -%}
+          <div class="title_post_tags">
+            <h2 class="article-card__title" id="Article-{{ article.id }}">
+              {{ article.title | escape }}
+            </h2>
+            <ul class="post_link">
+              <li class="nav"><button class="clothing">In Fashion, Clothing</button>
+              </li>
+              <li class="nav"><button class="no_comments">No Comments</button>
+              </li>
+              <li class="nav"><button class="hen_whitman">Hen whitman</button>
+              </li>
+            </ul>
+          </div>
+         </div>
         {%- if show_author -%}
           <span class="caption-with-letter-spacing">{{ article.author -}}</span>
         {%- endif -%}

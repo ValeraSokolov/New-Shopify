@@ -468,9 +468,9 @@ blockquote {
 }
 
 .caption-with-letter-spacing {
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: 0.13rem;
-  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  line-height: calc(1 + 0.4 / var(--font-body-scale));
   text-transform: uppercase;
 }
 
@@ -959,7 +959,7 @@ summary::-webkit-details-marker {
 @media screen and (min-width: 750px) {
   .grid__item {
     float: right;
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-bottom: 1rem;
     width: calc(20% - 1rem * 3 / 4);
     max-width: 50%;
@@ -1510,7 +1510,7 @@ details[open] > .share-button__fallback {
   border-bottom: 1px solid #9e9c9c;
 }
 
-.categories_list:nth-last-child(1) {
+.categories_list:last-of-type {
   border-bottom: none;
 }
 

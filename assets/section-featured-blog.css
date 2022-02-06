@@ -33,7 +33,7 @@
 .blog-placeholder__content {
   width: 100%;
   text-align: left;
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-left: 2.5rem;
   background: rgba(var(--color-foreground), 0.04);
 }
@@ -107,13 +107,20 @@
   display: flex;
 }
 
+.card_title {
+  display: flex;
+}
+
 .post_date {
+  text-align: center;
+  max-width: 10%;
   padding-top: 0.8rem;
   height: 7.5rem;
   background-color: #408de4;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-top: 3.6rem;
+  margin-top: 0.8rem;
+  margin-right: 1.5rem;
   color: #fff;
 }
 
@@ -132,7 +139,7 @@
   font-weight: bold;
 }
 
-.sidebar_tittle {
+.sidebar_title {
   font-weight: bold;
 }
 

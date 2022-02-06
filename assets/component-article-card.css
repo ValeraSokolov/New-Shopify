@@ -36,11 +36,20 @@
   box-sizing: border-box;
 }
 
+.title_post_tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .article-card__info {
-  padding: 3rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 5rem;
 }
 
 .article-content {
@@ -105,6 +114,8 @@
 
 .article-card__header h2:not(:first-child) {
   margin-top: 1rem;
+  margin-left: 2rem;
+  font-weight: bold;
 }
 
 .article-card__header h2 + span {

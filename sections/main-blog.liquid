@@ -1,6 +1,7 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 {{ 'base.css' | asset_url | stylesheet_tag }}
 {{ 'collage.css' | asset_url | stylesheet_tag }}
 
@@ -65,7 +66,7 @@
 
              {% when 'categories_title' %}
               {% if block.settings.categories_title != blanck %}
-                <h3 class="sidebar_tittle">{{ block.settings.categories_title | escape }}</h3>
+                <h3 class="sidebar_title">{{ block.settings.categories_title | escape }}</h3>
               {% endif %}
               {% when 'categories_link_list' %}
               {% for link in block.settings.categories_link_list.links %}
@@ -79,7 +80,7 @@
 
               {% when 'recent_post_title' %}
                 {% if block.settings.recent_post_title != blanck %}
-                  <h3 class="sidebar_tittle">{{ block.settings.recent_post_title | escape }}</h3>
+                  <h3 class="sidebar_title">{{ block.settings.recent_post_title | escape }}</h3>
                 {% endif %}
                 
                 {% when 'recent_post_link_list' %}
@@ -94,7 +95,7 @@
                   
                   {% when 'archives_title' %}
                     {% if block.settings.archives_title != blanck %}
-                      <h3 class="sidebar_tittle">{{ block.settings.archives_title | escape }}</h3>
+                      <h3 class="sidebar_title">{{ block.settings.archives_title | escape }}</h3>
                     {% endif %}
 
                   {% when 'archives_link_list' %}
@@ -109,7 +110,7 @@
 
                     {% when 'tags_title' %}
                       {% if block.settings.tags_title != blanck %}
-                        <h3 class="sidebar_tittle">{{ block.settings.tags_title | escape }}</h3>
+                        <h3 class="sidebar_title">{{ block.settings.tags_title | escape }}</h3>
                       {% endif %}
 
             {% else %}
