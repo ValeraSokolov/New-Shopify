@@ -1,0 +1,93 @@
+<!-- Shipping -->
+<link rel="stylesheet" href="{{ 'util.css' | asset_url }}" media="print" onload="this.media='all'">
+<section class="shipping bgwhite p-t-62 p-b-46" data-section-id="{{ section.id }}">
+ {% render 'feature-service1', blocks: section.blocks %}
+</section>
+{% schema %}
+{
+  "name": "Service Boxes section",
+  "max_blocks": 10,
+  "settings": [
+	{
+        "type": "text",
+        "id": "section_title",
+        "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "Feature box",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_service_title",
+          "label": "Feature Title"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_service_description",
+          "label": "Feature description"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "social icon 1"
+        },
+        {
+          "type": "url",
+          "id": "social_url_1",
+          "label": "social url 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "social icon 2"
+        },
+        {
+          "type": "url",
+          "id": "social_url_2",
+          "label": "social url 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "social icon 3"
+        },
+        {
+          "type": "url",
+          "id": "social_url_3",
+          "label": "social url 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "social icon 4"
+        },
+        {
+          "type": "url",
+          "id": "social_url_4",
+          "label": "social url 4"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Service box section",
+    "category": "Feature Sections",
+    "blocks": [
+      {
+        "type": "box"
+      },
+      {
+        "type": "box"
+      }
+    ]
+  }]
+}
+{% endschema %}

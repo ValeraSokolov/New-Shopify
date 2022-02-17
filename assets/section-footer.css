@@ -519,25 +519,6 @@ noscript .localization-selector.link {
   text-decoration: underline;
 }
 
-.grid--2-col-tablet.grid--4-col-desktop
-    .multicolumn-list__item:nth-of-type(-n + 4) {
-    margin-top: 0;
-  }
-
-  .multicolumn_login {
-    border-top: solid 2px #d3d3d3;
-    margin-top: 0;
-}
-
-.multicolumn-list__item:nth-child(-n+3) {
-  border-right: solid 2px #d3d3d3;
-}
-
-.multicolumn-list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-}
 
 /*FOOTER_BOTTOM*/
 .footer_bottom {

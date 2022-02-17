@@ -1,0 +1,54 @@
+.flex-w {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-col-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-service_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border: solid #ededed 2px;
+}
+
+.w-size6-1 {
+  width: 25%;
+}
+
+.feature-service_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s-text11{
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.m-text12 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.flex-m {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 263px;
+  height: 263px;
+}
