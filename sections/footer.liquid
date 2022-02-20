@@ -18,15 +18,14 @@
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%} 
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
-        {%- liquid
+        {%- liquid 
           if section.blocks.size == 9
             assign footer_grid_class = 'grid--3-col-tablet'
           elsif section.blocks.size > 6
             assign footer_grid_class = 'grid--4-col-desktop'
           elsif section.blocks.size > 4
             assign footer_grid_class = 'grid--3-col-tablet'
-          endif 
-        -%}
+          endif -%}
         
       {%- endif -%}
       <div class="footer-block--newsletter">
@@ -238,12 +237,31 @@
                     <span class="h2">{{ shop.name }}</span>
                   {%- endif -%}
                 </a>
-              <div class="logo_text">SuperMart</div>
-                <p class="paragraf_column">Many say exploration is part of our dest but it’s actually our duty to future and their.</p>
+          <div class="logo_text">SuperMart</div>
+            <ul class="footer-menu_list">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {%- when 'heading_footer' -%}
+                    {%- if block.settings.heading_footer != blank -%}
+                      <h3 class="sidebar_title">{{ block.settings.heading_footer | escape }}</h3>
+                    {%- endif -%}
+                
+                {%- when 'menu' -%}
+                  {%- for link in block.settings.menu.links -%}
+                    {%- if block.settings.menu != blank -%}
+                    <li class="footer-menu_list{%- if link.active -%} site-nav--active{%- endif -%}">
+                      <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endcase -%}
+            {%- endfor -%}
+          </ul>
+              <p class="paragraf_column">Many say exploration is part of our dest but it’s actually our duty to future and their.</p>
                 <address class="footer_address">Address: 868 Fake Street, New York</address>
                 <a class="footer_phone" href="tel:080847521499">Phone: (08) 08 4752 1499</a>
                 <a class="footer_email" href="mailto:info@supermart.com">Email: info@supermart.com</a>
-              </div>
+          </div>
                 <div class="column_company">
                   <p class="tittle_company">COMPANY</p>
                   <p class="paragraf_company">
@@ -264,7 +282,7 @@
                 </div>
                 <div class="column_policy">
                   <p class="tittle_policy">POLICY INFO</p>
-                  <p class="paragraf_policy"policy>
+                  <p class="paragraf_policy">
                     <a class="policy_link">Orders & Returns</a>
                   </p>
                   <p class="paragraf_policy">
@@ -299,7 +317,7 @@
                   </p>
                 </div>
             </div>
-      </div>
+          </div>
           <!--<small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
           <small class="copyright__content">{{ powered_by_link }}</small>-->
         </div>
@@ -370,7 +388,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "heading",
+          "id": "heading_footer",
           "default": "Quick links",
           "label": "t:sections.footer.blocks.link_list.settings.heading.label",
           "info": "t:sections.footer.blocks.link_list.settings.heading.info"
@@ -388,6 +406,11 @@
       "type": "text",
       "name": "t:sections.footer.blocks.text.name",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "t:sections.header.settings.logo.label"
+        },
         {
           "type": "text",
           "id": "heading",

@@ -2391,3 +2391,26 @@ details-disclosure > details {
   }
 }
 
+.breadcrumbs__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 0;
+  align-items: center;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3.2rem;
+}
+
+.breadcrumbs__link-home {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.2rem;
+}

@@ -20,17 +20,15 @@
   >
 
   <div class="hero__container page-width">
-    <h1 class="hero__title">{{ blog.title }}</h1>
+    <!--<h1 class="hero__title">{{ blog.title }}</h1>-->
 
-    <div class="breadcrumbs">
+    <div class="breadcrumbs container">
     {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
       {%- assign t = template | split: '.' | first -%}
       
       <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
         <ol class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="/">Home</a>
-          </li> 
+          
           {%- case t -%}
             {%- when 'page' -%}
               <li class="breadcrumbs__item">
@@ -72,6 +70,9 @@
                 <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
               </li>
           {%- endcase -%}
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link-home" href="/">HOME/{{ page_title }}</a>
+          </li> 
         </ol>
       </nav>
       {%- endunless -%}
