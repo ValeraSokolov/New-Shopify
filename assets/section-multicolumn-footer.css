@@ -38,14 +38,17 @@
 }
 
 .multicolumn-list__item.center
-  .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),
+.multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),
 .multicolumn-list__item:only-child {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .multicolumn-card {
-  padding-top: 40px;
+  padding-top: 0px;
 }
 
 .multicolumn .button {
@@ -205,7 +208,10 @@
 }
 
 .multicolumn-card__info {
-  padding: 2.5rem 2.5rem;
+  padding-top: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  
 }
 
 .background-none .multicolumn-card__info {
