@@ -23,8 +23,8 @@
         "16505555258238e1af-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "CONTACT US",
+            "button_link": "#"
           }
         }
       },
