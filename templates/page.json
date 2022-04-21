@@ -39,6 +39,50 @@
         "layout": "image_first"
       }
     },
+    "1650555728186579fb": {
+      "type": "multicolumn-about-us",
+      "blocks": {
+        "16505557285585b194-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.png",
+            "title": "STRATEGY & MARKETING",
+            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+          }
+        },
+        "16505557285585b194-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "title": "INTERACTION DESIGN",
+            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+          }
+        },
+        "16505557285585b194-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3.png",
+            "title": "WEB DEVELOPEMNT",
+            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16505557285585b194-0",
+        "16505557285585b194-1",
+        "16505557285585b194-2"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "16505552962cf5680c": {
       "type": "service-box",
       "blocks": {
@@ -101,55 +145,48 @@
         "section_title": ""
       }
     },
-    "1650555728186579fb": {
-      "type": "multicolumn-about-us",
+    "1650556673a9e673b0": {
+      "type": "rich-text",
       "blocks": {
-        "16505557285585b194-0": {
-          "type": "column",
+        "16505566731b8e940f-0": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1.png",
-            "title": "STRATEGY & MARKETING",
-            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+            "heading": "MEET THE TEAM",
+            "heading_size": "h1"
           }
         },
-        "16505557285585b194-1": {
-          "type": "column",
+        "16505566731b8e940f-1": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2.png",
-            "title": "INTERACTION DESIGN",
-            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+            "text": "<p>That's just a little bit more than the law will allow love exciting and new come.<\/p>"
           }
         },
-        "16505557285585b194-2": {
-          "type": "column",
+        "16505566731b8e940f-2": {
+          "type": "button",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/3.png",
-            "title": "WEB DEVELOPEMNT",
-            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "16505557285585b194-0",
-        "16505557285585b194-1",
-        "16505557285585b194-2"
+        "16505566731b8e940f-0",
+        "16505566731b8e940f-1",
+        "16505566731b8e940f-2"
       ],
       "settings": {
-        "title": "",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false
+        "color_scheme": "background-1",
+        "full_width": true
       }
     }
   },
   "order": [
     "main",
     "1650555525a350c025",
+    "1650555728186579fb",
     "16505552962cf5680c",
-    "1650555728186579fb"
+    "1650556673a9e673b0"
   ]
 }
