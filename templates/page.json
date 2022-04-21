@@ -100,11 +100,54 @@
       "settings": {
         "section_title": ""
       }
+    },
+    "1650555728186579fb": {
+      "type": "multicolumn-about-us",
+      "blocks": {
+        "16505557285585b194-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.png",
+            "title": "STRATEGY & MARKETING",
+            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
+          }
+        },
+        "16505557285585b194-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "16505557285585b194-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16505557285585b194-0",
+        "16505557285585b194-1",
+        "16505557285585b194-2"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     }
   },
   "order": [
     "main",
     "1650555525a350c025",
-    "16505552962cf5680c"
+    "16505552962cf5680c",
+    "1650555728186579fb"
   ]
 }
