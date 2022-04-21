@@ -1,10 +1,110 @@
 {
   "sections": {
     "main": {
-      "type": "main-page"
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "1650555525a350c025": {
+      "type": "image-with-text",
+      "blocks": {
+        "16505555258238e1af-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hello, We are Supermart Established  2006 – Newyork"
+          }
+        },
+        "16505555258238e1af-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "16505555258238e1af-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16505555258238e1af-0",
+        "16505555258238e1af-1",
+        "16505555258238e1af-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
+    },
+    "16505552962cf5680c": {
+      "type": "service-box",
+      "blocks": {
+        "165055529638e3f72f-0": {
+          "type": "box",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/legkij-maket-dlya-internet-magazina-about-us_03.png",
+            "feature_service_title": "",
+            "feature_service_description": "",
+            "social_url_1": "",
+            "social_url_2": "",
+            "social_url_3": "",
+            "social_url_4": ""
+          }
+        },
+        "165055529638e3f72f-1": {
+          "type": "box",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/legkij-maket-dlya-internet-magazina-about-us_03.png",
+            "feature_service_title": "",
+            "feature_service_description": "",
+            "social_url_1": "",
+            "social_url_2": "",
+            "social_url_3": "",
+            "social_url_4": ""
+          }
+        },
+        "4fa8652f-4a54-4ad2-bd3b-62cbf5b6a3f0": {
+          "type": "box",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/legkij-maket-dlya-internet-magazina-about-us_03.png",
+            "feature_service_title": "",
+            "feature_service_description": "",
+            "social_url_1": "",
+            "social_url_2": "",
+            "social_url_3": "",
+            "social_url_4": ""
+          }
+        },
+        "62ff0dad-573e-481a-b66f-41412bcc6d3e": {
+          "type": "box",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/legkij-maket-dlya-internet-magazina-about-us_03.png",
+            "feature_service_title": "",
+            "feature_service_description": "",
+            "social_url_1": "",
+            "social_url_2": "",
+            "social_url_3": "",
+            "social_url_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "165055529638e3f72f-0",
+        "165055529638e3f72f-1",
+        "4fa8652f-4a54-4ad2-bd3b-62cbf5b6a3f0",
+        "62ff0dad-573e-481a-b66f-41412bcc6d3e"
+      ],
+      "settings": {
+        "section_title": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1650555525a350c025",
+    "16505552962cf5680c"
   ]
 }
