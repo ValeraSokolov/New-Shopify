@@ -115,8 +115,9 @@
         "16505557285585b194-1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "image": "shopify:\/\/shop_images\/2.png",
+            "title": "INTERACTION DESIGN",
+            "text": "<p>We choose to go to the moon in this <br\/>decade and the other things because they are easy they are hard goal section.<\/p>"
           }
         },
         "16505557285585b194-2": {
