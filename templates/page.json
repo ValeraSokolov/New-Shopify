@@ -221,11 +221,15 @@
           "type": "box",
           "settings": {
             "icon": "shopify:\/\/shop_images\/legkij-maket-dlya-internet-magazina-about-us_03.png",
-            "feature_service_title": "",
-            "feature_service_description": "",
+            "feature_service_title": "EVEN CHESLER",
+            "feature_service_description": "Sales Director",
+            "icon_1": "shopify:\/\/shop_images\/icon-facebook.png",
             "social_url_1": "",
+            "icon_2": "shopify:\/\/shop_images\/icon-twitter.png",
             "social_url_2": "",
+            "icon_3": "shopify:\/\/shop_images\/icon-instagram.png",
             "social_url_3": "",
+            "icon_4": "shopify:\/\/shop_images\/icon-google.png",
             "social_url_4": ""
           }
         }
