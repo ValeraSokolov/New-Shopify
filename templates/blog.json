@@ -18,6 +18,7 @@
     },
     "164207117126e61e1e": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Create an Amazing Store With us",
         "blog": "news",
@@ -31,6 +32,7 @@
     },
     "1642071175f6d61edd": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "A New Approach to Shopping UI",
         "blog": "news",
@@ -44,6 +46,7 @@
     },
     "164207117881664e38": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Everything You Need to Create Your Store",
         "blog": "news",
@@ -57,6 +60,7 @@
     },
     "1642071180d62e7765": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Crafted from Ground Up to Sell",
         "blog": "news",
@@ -70,6 +74,7 @@
     },
     "1642071185e7cb244a": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Tour of Envato’s Melbourne Headquarters",
         "blog": "news",
@@ -83,6 +88,7 @@
     },
     "1642071201436e06e0": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"pagination_sidebar\">\n    <a class=\"pagination_link_one\">1<\/a>\n    <a class=\"pagination_link\">2<\/a>\n    <a class=\"pagination_link\">&gt;<\/a>\n    <\/div>"
       }
