@@ -1148,7 +1148,6 @@ summary::-webkit-details-marker {
   max-width: 100%;
   position: absolute;
   height: 100%;
- 
 }
 
 .media > img {
@@ -1997,7 +1996,7 @@ input[type='checkbox'] {
 
 .header__heading-logo {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 989px) {

@@ -128,12 +128,13 @@
 
 .about-us-list__item.center .media--adapt,
 .about-us-list__item .media--adapt img {
-  width: auto;
+  margin-top: 0px;
+  /* width: auto;*/
 }
 
 .about-us-list__item.center .media--adapt img {
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translate(-50%);*/
 }
 
 @media screen and (max-width: 749px) {
@@ -263,8 +264,20 @@
 }
 
 .about-us-img {
-  display: block;
+ /*display: block;*/
   max-width: 100%;
   position: absolute;
   height: 100%;
+}
+
+.about_us_background {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 82px;
+  height: 82px;
+  background: #408de4;
+  border-radius: 50%;
+  align-items: center;
 }

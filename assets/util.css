@@ -58,3 +58,20 @@
 .social-list__item {
   padding-right: 1rem;
 }
+
+.heading_service-box {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.heading-title__blocks {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.heading-text__blocks {
+  font-size: 1.4rem;
+  color: #080808;
+  margin-bottom: 2rem;
+}

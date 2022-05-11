@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'disclosure.css' | asset_url }}" media="print" onload="this.media='all'">
-  
+
   <noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
   <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
   <noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
@@ -15,10 +15,10 @@
   <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient">
-  {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%} 
+  {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
-        {%- liquid 
+        {%- liquid
           if section.blocks.size == 9
             assign footer_grid_class = 'grid--3-col-tablet'
           elsif section.blocks.size > 6
@@ -26,7 +26,7 @@
           elsif section.blocks.size > 4
             assign footer_grid_class = 'grid--3-col-tablet'
           endif -%}
-        
+
       {%- endif -%}
       <div class="footer-block--newsletter">
         {%- if section.settings.newsletter_enable -%}
@@ -76,9 +76,9 @@
             {%- endform -%}
           </div>
         {%- endif -%}
-        
+
         {%- if section.settings.show_social -%}
-          <ul class="footer__list-social list-unstyled list-social" role="list">
+          <ul class="footer__list-social list-unstyled list-social">
             {%- if settings.social_twitter_link != blank -%}
               <li class="footer-block__heading">
                 <h3 class="footer_keep">KEEP IN TOUCH</h3>
@@ -210,7 +210,7 @@
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
+            <ul class="list list-payment">
               {%- for type in shop.enabled_payment_types -%}
                 <li class="list-payment__item">
                   {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
@@ -219,12 +219,13 @@
             </ul>
           </div>
         {%- endif -%}
-        <div class="footer__copyright caption">
-            <div class="footer_bottom">
-              <div class="logo_container">
+
+            <div class="footer_bottom container">
+              <div class="footer_logo_container">
                 <a href="{{ routes.root_url }}" class="tittle_logo">
                   {%- if section.settings.logo != blank -%}
                     {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+
                     <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
                       src="{{ section.settings.logo | img_url: image_size }}"
                       loading="lazy"
@@ -237,93 +238,51 @@
                     <span class="h2">{{ shop.name }}</span>
                   {%- endif -%}
                 </a>
-          <div class="logo_text">SuperMart</div>
-            <ul class="footer-menu_list">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                    {%- when 'heading_footer' -%}
-                    {%- if block.settings.heading_footer != blank -%}
-                      <h3 class="sidebar_title">{{ block.settings.heading_footer | escape }}</h3>
-                    {%- endif -%}
                 
-                {%- when 'menu' -%}
-                  {%- for link in block.settings.menu.links -%}
-                    {%- if block.settings.menu != blank -%}
-                    <li class="footer-menu_list{%- if link.active -%} site-nav--active{%- endif -%}">
-                      <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
-                    </li>
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endcase -%}
-            {%- endfor -%}
-          </ul>
-              <p class="paragraf_column">Many say exploration is part of our dest but it’s actually our duty to future and their.</p>
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'heading' -%}
+                        <strong class="logo_text" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</strong>
+                      {%- when 'text' -%}
+                        <div class="paragraf_column footer_phone" {{ block.shopify_attributes }}>{{ block.settings.text }}
+                      </div>
+                    {%- endcase -%}
+                  {%- endfor -%}
+                
+               <!--<strong class="logo_text">SuperMart</strong>
+                <p class="paragraf_column">Many say exploration is part of our dest but it’s actually our duty to future and their.</p>
                 <address class="footer_address">Address: 868 Fake Street, New York</address>
                 <a class="footer_phone" href="tel:080847521499">Phone: (08) 08 4752 1499</a>
-                <a class="footer_email" href="mailto:info@supermart.com">Email: info@supermart.com</a>
-          </div>
-                <div class="column_company">
-                  <p class="tittle_company">COMPANY</p>
-                  <p class="paragraf_company">
-                    <a class="company_link">Discount Vouches</a>
-                  </p>
-                  <p class="paragraf_company">
-                    <a class="company_link">Spring Collection</a>
-                  </p>
-                  <p class="paragraf_company">
-                    <a class="company_link">Trending</a>
-                  </p>
-                  <p class="paragraf_company">
-                    <a class="company_link">Best Sellers</a>
-                  </p>
-                  <p class="paragraf_company">
-                    <a class="company_link">Special Deals</a>
-                  </p>
-                </div>
-                <div class="column_policy">
-                  <p class="tittle_policy">POLICY INFO</p>
-                  <p class="paragraf_policy">
-                    <a class="policy_link">Orders & Returns</a>
-                  </p>
-                  <p class="paragraf_policy">
-                    <a class="policy_link">Advanced Search</a>
-                  </p>
-                  <p class="paragraf_policy">
-                    <a class="policy_link">Help & FAQs</a>
-                  </p>
-                  <p class="paragraf_policy">
-                    <a class="policy_link">Consultant</a>
-                  </p>
-                  <p class="paragraf_policy">
-                    <a class="policy_link">Store Locations</a>
-                  </p>
-                </div>
-                <div class="column_account">
-                  <p class="tittle_account">MY ACCOUNT</p>
-                  <p class="paragraf_account">
-                    <a href="/pages/about-us" class="account_link">About Us</a>
-                  </p>
-                  <p class="paragraf_account">
-                    <a class="account_link">Delivery Information</a>
-                  </p>
-                  <p class="paragraf_account">
-                    <a class="account_link">Privacy Policy</a>
-                  </p>
-                  <p class="paragraf_account">
-                    <a class="account_link">Terms & Conditions</a>
-                  </p>
-                  <p class="paragraf_account">
-                    <a class="account_link">Custom Link</a>
-                  </p>
-                </div>
-            </div>
+                <a class="footer_email" href="mailto:info@supermart.com">Email: info@supermart.com</a>-->
+              </div>
+
+            {%- for block in section.blocks -%}
+              <div class="column_company"> 
+                {% case block.type %}
+                  {% when 'navigation_column' %}
+                    {% if block.settings.navigation_title != blank %}
+                      <h3 class="tittle_company">{{ block.settings.navigation_title | escape }}</h3>
+                    {% endif %}
+
+                    {% if block.settings.navigation_link_list.links.size > 0 %}
+                      <ul>
+                        {% for link in block.settings.navigation_link_list.links %}
+                          <li class="paragraf_company{% if link.active %} site-nav--active{% endif %}">
+                            <a href="{{ link.url }}" class="company_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                {% endcase %}
+              </div>
+            {%- endfor -%}
           </div>
           <!--<small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
           <small class="copyright__content">{{ powered_by_link }}</small>-->
         </div>
       </div>
     </div>
-  </div>
+  
 </footer>
 
 {% javascript %}
@@ -403,25 +362,66 @@
       ]
     },
     {
-      "type": "text",
-      "name": "t:sections.footer.blocks.text.name",
+      "type": "navigation_column",
+      "name": "Navigation column",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "logo",
-          "label": "t:sections.header.settings.logo.label"
+          "type": "text",
+          "id": "navigation_title",
+          "label": "Company",
+          "default": "Company tittle"
         },
+        {
+          "type": "link_list",
+          "id": "navigation_link_list",
+          "label": "Menu",
+          "default": "main-menu"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.rich-text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
         {
           "type": "text",
           "id": "heading",
-          "default": "Heading",
-          "label": "t:sections.footer.blocks.text.settings.heading.label"
+          "default": "Talk about your brand",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
         },
         {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
           "type": "richtext",
-          "id": "subtext",
-          "default": "<p>Share store details, promotions, or brand content with your customers.</p>",
-          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+          "id": "text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
         }
       ]
     },

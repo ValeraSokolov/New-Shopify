@@ -60,8 +60,7 @@
 
 .footer__content-bottom-wrapper {
   display: flex;
-  padding-left: 85px;
- width: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 749px) {
@@ -163,6 +162,7 @@
 
 .footer-block__heading {
   display: flex;
+  justify-content: center;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
@@ -522,10 +522,9 @@ noscript .localization-selector.link {
 
 /*FOOTER_BOTTOM*/
 .footer_bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 0px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .shop_on_app {
@@ -535,9 +534,8 @@ noscript .localization-selector.link {
   padding-right: 20px;
 }
 
-.logo_container {
-  display: inline-flex; 
-  flex-wrap: wrap;
+.footer_logo_container{
+  max-width: 30rem;
 }
 
 .paragraf_column {
@@ -546,8 +544,9 @@ noscript .localization-selector.link {
   font-size: 14px;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 10px;
   padding-bottom: 10px;
+  font-style: normal;
+  text-decoration: none;
  }
  
  .footer_address {
@@ -556,11 +555,12 @@ noscript .localization-selector.link {
    font-size: 14px;
  }
  
- .footer_phone {
+ .footer_phone a{
    color: #a8a8a8;
    font-style: normal;
    font-size: 14px;
    text-decoration: none;
+
  }
  
  .footer_email {
@@ -577,9 +577,10 @@ noscript .localization-selector.link {
  .tittle_company {
    color: #000;
    text-align: left;
-   font-size: 16px;
+   font-size: 18px;
    padding-top: 7px;
-   padding-bottom: 29px;
+   padding-bottom: 15px;
+   padding-left: 35px;
    margin-top: 0;
    margin-bottom: 0;
  }
@@ -603,6 +604,7 @@ noscript .localization-selector.link {
    color: #000;
    text-align: left;
    font-size: 16px;
+   padding-left: 16px;
    padding-top: 7px;
    padding-bottom: 29px;
    margin-top: 0;
@@ -646,6 +648,7 @@ noscript .localization-selector.link {
    color: #000;
    text-align: left;
    font-size: 16px;
+   padding-left: 16px;
    padding-top: 7px;
    padding-bottom: 29px;
    margin-top: 0;
@@ -703,3 +706,4 @@ noscript .localization-selector.link {
   padding-left: 20px;
   padding-right: 20px;
 }
+

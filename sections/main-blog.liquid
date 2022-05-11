@@ -6,114 +6,104 @@
 {{ 'collage.css' | asset_url | stylesheet_tag }}
 
 {%- paginate blog.articles by 4 -%}
-
   <div class="main-blog page-width">
     <div class="grid">
       <div class="main-blog__content grid--9-col">
         <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
           {%- for article in blog.articles -%}
-            <div class="blog-articles__article article">
-              {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
-            </div>
+          <div class="blog-articles__article article">
+            {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+          </div>
           {%- endfor -%}
         </div>
-
         {%- if paginate.pages > 1 -%}
-          {%- render 'pagination', paginate: paginate -%}
+        {%- render 'pagination', paginate: paginate -%}
         {%- endif -%}
       </div>
-
       <div class="sidebar grid--3-col grid__item">
         {%- for block in section.blocks -%}
-          {% case block.type %}
-            {% when 'sidebar_search' %}
-              {% if block.settings.search_title != blank %}
-                <h3 class="visually-hidden">{{ block.settings.search_title | escape }}</h3>
-              {% endif %}
-
-              <form action="{{ routes.search_url }}" method="get" role="search" class="form_search">
-                <div class="field">
-                  <input class="sidebar_search"
-                         id="Search-In-Modal"
-                         type=""
-                         name="q"
-                         value=""
-                         placeholder="{{ 'general.search.search' | t }}"
-                      {%- if settings.predictive_search_enabled -%}
-                        role="combobox"
-                        aria-expanded="false"
-                        aria-owns="predictive-search-results-list"
-                        aria-controls="predictive-search-results-list"
-                        aria-haspopup="listbox"
-                        aria-autocomplete="list"
-                        autocorrect="off"
-                        autocomplete="off"
-                        autocapitalize="off"
-                        spellcheck="false"
-                      {%- endif -%}
-                  >
-                  <input type="hidden" name="options[prefix]" value="last">
-                  <button aria-label="{{ 'general.search.search' | t }}">
-                    <svg class="svg-icon" viewBox="0 0 20 20">
-                      <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
-                      c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
-                      c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
-                      s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </form>
-
-             {% when 'categories_title' %}
-              {% if block.settings.categories_title != blank %}
-                <h3 class="sidebar_title">{{ block.settings.categories_title | escape }}</h3>
-              {% endif %}
-              {% when 'categories_link_list' %}
-              {% for link in block.settings.categories_link_list.links %}
-                {% if link.links != blank %}
-                {% else %}
-                  <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
-                    <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
-                  </li>
-                {% endif %}
-              {% endfor %}
-
-              {% when 'recent_post_title' %}
-                {% if block.settings.recent_post_title != blank %}
-                  <h3 class="sidebar_title">{{ block.settings.recent_post_title | escape }}</h3>
-                {% endif %}
-                
-                {% when 'recent_post_link_list' %}
-                  {% for link in block.settings.recent_post_link_list.links %}
-                    {% if link.links != blank %}
-                    {% else %}
-                      <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
-                        <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
-                      </li>
-                    {% endif %}
-                  {% endfor %}
-                  
-                  {% when 'archives_title' %}
-                    {% if block.settings.archives_title != blank %}
-                      <h3 class="sidebar_title">{{ block.settings.archives_title | escape }}</h3>
-                    {% endif %}
-
-                  {% when 'archives_link_list' %}
-                    {% for link in block.settings.archives_link_list.links %}
-                      {% if link.links != blank %}
-                      {% else %}
-                        <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
-                          <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
-                        </li>
-                      {% endif %}
-                    {% endfor %}
-
-                    {% when 'tags_title' %}
-                      {% if block.settings.tags_title != blank %}
-                        <h3 class="sidebar_title">{{ block.settings.tags_title | escape }}</h3>
-                      {% endif %}
-            {% else %}
-          {% endcase %}
+        {% case block.type %}
+        {% when 'sidebar_search' %}
+        {% if block.settings.search_title != blank %}
+        <h3 class="visually-hidden">{{ block.settings.search_title | escape }}</h3>
+        {% endif %}
+        <form action="{{ routes.search_url }}" method="get" role="search" class="form_search">
+          <div class="field">
+            <input class="sidebar_search"
+            id="Search-In-Modal"
+            type=""
+            name="q"
+            value=""
+            placeholder="{{ 'general.search.search' | t }}"
+            {%- if settings.predictive_search_enabled -%}
+            role="combobox"
+            aria-expanded="false"
+            aria-owns="predictive-search-results-list"
+            aria-controls="predictive-search-results-list"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            autocorrect="off"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            {%- endif -%}
+            >
+            <input type="hidden" name="options[prefix]" value="last">
+            <button aria-label="{{ 'general.search.search' | t }}">
+              <svg class="svg-icon" viewBox="0 0 20 20">
+                <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+                  c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+                  c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+                  s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+        {% when 'categories_title' %}
+          {% if block.settings.categories_title != blank %}
+          <h3 class="sidebar_title">{{ block.settings.categories_title | escape }}</h3>
+          {% endif %}
+          {% when 'categories_link_list' %}
+          {% for link in block.settings.categories_link_list.links %}
+          {% if link.links != blank %}
+          {% else %}
+        <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
+          <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% when 'recent_post_title' %}
+        {% if block.settings.recent_post_title != blank %}
+        <h3 class="sidebar_title">{{ block.settings.recent_post_title | escape }}</h3>
+        {% endif %}
+        {% when 'recent_post_link_list' %}
+        {% for link in block.settings.recent_post_link_list.links %}
+        {% if link.links != blank %}
+        {% else %}
+        <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
+          <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% when 'archives_title' %}
+        {% if block.settings.archives_title != blank %}
+        <h3 class="sidebar_title">{{ block.settings.archives_title | escape }}</h3>
+        {% endif %}
+        {% when 'archives_link_list' %}
+        {% for link in block.settings.archives_link_list.links %}
+        {% if link.links != blank %}
+        {% else %}
+        <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
+          <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% when 'tags_title' %}
+        {% if block.settings.tags_title != blank %}
+        <h3 class="sidebar_title">{{ block.settings.tags_title | escape }}</h3>
+        {% endif %}
+        {% else %}
+        {% endcase %}
         {%- endfor -%}
       </div>
     </div>

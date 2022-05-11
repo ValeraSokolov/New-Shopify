@@ -9,13 +9,13 @@
     <div class="counter__blocks">
       {%- for block in section.blocks -%}
         <div class="heading__box">
-        {%- case block.type -%}
-          {%- when 'heading' -%}
-            <h2 class="heading_total" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
-          {%- when 'heading' -%}
-            <h3 class="heading_text">{{ block.settings.text }}</h3>
-        {%- endcase -%}
-      </div>
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="heading_total" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+            {%- when 'heading' -%}
+              <h2 class="heading_text">{{ block.settings.text }}</h2>
+          {%- endcase -%}
+        </div>
       {%- endfor -%}
     </div>
   </div>
@@ -95,9 +95,9 @@
           "label": "t:sections.counter-block.blocks.heading.settings.heading_size.label"
         },
         {
-          "type": "richtext",
+          "type": "text",
           "id": "text",
-          "default": "<p>Statistics</p>",
+          "default": "Statistics",
           "label": "t:sections.counter-block.blocks.text.settings.text.label"
         }
       ]
