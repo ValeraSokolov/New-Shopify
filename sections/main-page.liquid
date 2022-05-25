@@ -4,22 +4,13 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="page-width page-width--narrow">
-  <h3 class="main-page-title page-title h0">
-    {{ page.title | escape }}
-  </h3>
-  <div class="link_baner">
-  <p class="pagination_link">HOME/ABOUT US</p>
-  </div>
- <!-- <div class="rte">
-    {{ page.content }}
-  </div>-->
+<div class="page-width page-header">
+  {% render 'breadcrumbs' %}
 </div>
 
 {% schema %}
 {
   "name": "t:sections.main-page.name",
-  "tag": "section",
-  "class": "spaced-section"
+  "tag": "section"
 }
 {% endschema %}

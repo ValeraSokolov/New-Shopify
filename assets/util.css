@@ -1,9 +1,5 @@
 .flex-w {
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -74,4 +70,12 @@
   font-size: 1.4rem;
   color: #080808;
   margin-bottom: 2rem;
+}
+
+
+@media screen and (max-width: 988px) {
+.w-size6-1 {
+  width: 50%;
+  padding-bottom: 30px;
+}
 }

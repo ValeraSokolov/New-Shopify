@@ -28,3 +28,18 @@
 .pagination_link {
   color: white;
 }
+
+.page-header{
+  display: flex;
+  background-color: #686868;
+  padding-left: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbs__link-page {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}

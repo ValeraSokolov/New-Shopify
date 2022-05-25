@@ -17,7 +17,7 @@ body {
 
 .header {
   background: #ffffff;
-  height: 160px;
+  
 }
 
 .header_top {
@@ -254,6 +254,7 @@ img {
 
 .bottom_header {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .burger {

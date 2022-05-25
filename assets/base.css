@@ -1078,6 +1078,10 @@ summary::-webkit-details-marker {
     width: 100%;
   }
 
+  .multicolumn-list__item:nth-child(-n+3) {
+    border-right: none;
+}
+
   .grid--peek.slider--mobile .grid__item {
     box-sizing: content-box;
     margin: 0;
@@ -2411,5 +2415,5 @@ details-disclosure > details {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
