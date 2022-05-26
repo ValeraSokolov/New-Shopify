@@ -1507,7 +1507,7 @@ details[open] > .share-button__fallback {
 }
 
 .categories_list {
-  width: 50%;
+  width: 55%;
   padding-bottom: 5px;
   padding-top: 5px;
   color: #686868;
@@ -2401,6 +2401,8 @@ details-disclosure > details {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -2409,6 +2411,7 @@ details-disclosure > details {
   text-transform: uppercase;
   color: #fff;
   font-size: 3.2rem;
+  font-weight: 500;
 }
 
 .breadcrumbs__link-home {

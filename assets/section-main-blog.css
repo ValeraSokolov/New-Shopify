@@ -46,34 +46,3 @@
     padding-bottom: 82.5rem;
   }
 }
-
-
-/*breadcrumbs*/
-.breadcrumbs {
-  margin: 0;
-}
-
-.breadcrumbs__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.breadcrumbs__item {
-  display: inline-block;
-}
-
-.breadcrumbs__link {
-  text-decoration: underline;
-}
-
-.breadcrumbs__link[aria-current="page"] {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.breadcrumbs__link[aria-current="page"]:focus,
-.breadcrumbs__link[aria-current="page"]:hover{
-  text-decoration: underline;
-}

@@ -1281,9 +1281,6 @@
         }
       }
     },
-    "main-page": {
-      "name": "Page"
-    },
     "main-password-footer": {
       "name": "Password footer",
       "settings": {
@@ -2000,6 +1997,17 @@
       },
       "presets": {
         "name": "Page"
+      }
+    },
+    "main-page": {
+      "name": "Breadcrumbs",
+      "settings": {
+        "page": {
+          "label": "Breadcrumbs"
+        }
+      },
+      "presets": {
+        "name": "Breadcrumbs"
       }
     },
     "product-recommendations": {

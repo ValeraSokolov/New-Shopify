@@ -2,8 +2,8 @@
   {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
     {%- assign t = template | split: '.' | first -%}
 <div class="breadcrambs-container">
-
-    <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+	<h2 class="title visually-hidden">Breadcrambs</h2>
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
       <ol class="breadcrumbs__list">
         
        {%- case t -%}
