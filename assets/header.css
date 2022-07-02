@@ -36,7 +36,6 @@ body {
 
 .top-bar {
   display: flex;
-  height: 42px;
   align-items: center;
 }
 
@@ -44,7 +43,6 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding-top: 5px;
 }
 
 .nav {
@@ -535,5 +533,13 @@ img {
   
   .col-sm-12 {
     width: 100%;
+  }
+  .logo_text,
+  .navi {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
   }
 }
