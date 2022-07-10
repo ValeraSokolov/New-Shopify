@@ -9,7 +9,7 @@
        {%- case t -%}
           {%- when 'page' -%}
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+              <h2 class="breadcrumbs__link">{{ page.title }}</h2>
             </li>
              {%- when 'product' -%}
             {%- if collection.url -%}
@@ -49,7 +49,7 @@
         {%- endcase -%}
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link-home" href="{{ routes.root_url }}">HOME/</a>
-          <a class="breadcrumbs__link-page" href="{{ page.url }}" aria-current="page">{{ page_title }}</a>
+          <span class="breadcrumbs__link-page">{{ page_title }}</span>
         </li> 
       </ol>
     </nav>

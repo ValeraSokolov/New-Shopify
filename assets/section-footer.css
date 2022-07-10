@@ -212,8 +212,11 @@
 
 @media screen and (max-width: 749px) {
   .footer__list-social.list-social {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: center;
-  }
+}
 }
 
 @media screen and (min-width: 750px) {
@@ -536,6 +539,7 @@ noscript .localization-selector.link {
 
 .footer_logo_container{
   max-width: 30rem;
+  padding-right: 3.5rem;
 }
 
 .paragraf_column {
@@ -580,7 +584,6 @@ noscript .localization-selector.link {
    font-size: 18px;
    padding-top: 7px;
    padding-bottom: 15px;
-   padding-left: 35px;
    margin-top: 0;
    margin-bottom: 0;
  }
@@ -670,6 +673,11 @@ noscript .localization-selector.link {
    text-decoration: none;
  }
  
+ .list_company_footer {
+   padding-left: 0;
+   padding-right: 3.5rem;
+}
+
  .features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -707,3 +715,10 @@ noscript .localization-selector.link {
   padding-right: 20px;
 }
 
+@media screen and (max-width: 749px) {
+  .footer_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

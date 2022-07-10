@@ -91,7 +91,7 @@
           "settings": {
             "heading": "142",
             "heading_size": "h1",
-            "text": "<p>Total Employees<\/p>"
+            "text": "Total Employees"
           }
         },
         "18d37b52-54e1-4341-87c9-0f98bc235305": {
@@ -99,7 +99,7 @@
           "settings": {
             "heading": "99",
             "heading_size": "h1",
-            "text": "<p>% Satisfaction<\/p>"
+            "text": "% Satisfaction"
           }
         },
         "ffea4939-2303-4574-8266-0c0b7cfe48eb": {
@@ -107,7 +107,7 @@
           "settings": {
             "heading": "4214",
             "heading_size": "h1",
-            "text": "<p>Cups of Coffee<\/p>"
+            "text": "Cups of Coffee"
           }
         },
         "5081c2c9-735b-453f-a177-7bac0ee3cd24": {
@@ -115,7 +115,7 @@
           "settings": {
             "heading": "4.7",
             "heading_size": "h1",
-            "text": "<p>Buyers Rating<\/p>"
+            "text": "Buyers Rating"
           }
         }
       },
@@ -127,42 +127,6 @@
       ],
       "settings": {
         "color_scheme": "accent-1",
-        "full_width": true
-      }
-    },
-    "1650556673a9e673b0": {
-      "type": "rich-text",
-      "blocks": {
-        "16505566731b8e940f-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "MEET THE TEAM",
-            "heading_size": "h1"
-          }
-        },
-        "16505566731b8e940f-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>That's just a little bit more than the law will allow love exciting and new come.<\/p>"
-          }
-        },
-        "16505566731b8e940f-2": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "16505566731b8e940f-0",
-        "16505566731b8e940f-1",
-        "16505566731b8e940f-2"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
         "full_width": true
       }
     },
@@ -241,6 +205,13 @@
         "62ff0dad-573e-481a-b66f-41412bcc6d3e"
       ],
       "settings": {
+        "heading": "Talk about your brand",
+        "rich-text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store."
+      }
+    },
+    "1657379678bed478fe": {
+      "type": "main-page",
+      "settings": {
       }
     }
   },
@@ -249,7 +220,7 @@
     "1650555525a350c025",
     "1650555728186579fb",
     "1650556799e9371652",
-    "1650556673a9e673b0",
-    "16505552962cf5680c"
+    "16505552962cf5680c",
+    "1657379678bed478fe"
   ]
 }

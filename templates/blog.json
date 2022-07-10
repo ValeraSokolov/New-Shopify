@@ -1,7 +1,72 @@
 {
   "sections": {
+    "1656843277a71d7ce7": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-blog",
+      "blocks": {
+        "7ad5a2e6-dd6e-4f5a-81a5-59f3d8d6b772": {
+          "type": "sidebar_search",
+          "settings": {
+            "search_title": "search form"
+          }
+        },
+        "f69547ee-0b4d-44d4-b165-35194b8c7353": {
+          "type": "categories_title",
+          "settings": {
+            "categories_title": "CATEGORIES"
+          }
+        },
+        "87c95bd8-f9f3-4897-a5f8-8f66d3786cc7": {
+          "type": "categories_link_list",
+          "settings": {
+            "categories_link_list": "sidebar-manu"
+          }
+        },
+        "48298ca0-cd90-4034-91a2-23b47abbc803": {
+          "type": "recent_post_title",
+          "settings": {
+            "recent_post_title": "RECENT POST"
+          }
+        },
+        "00c2c547-9b07-464c-8b92-5df2394ea043": {
+          "type": "recent_post_link_list",
+          "settings": {
+            "recent_post_link_list": "recent-post"
+          }
+        },
+        "16d049c8-18ec-40db-a334-ddbbefa899d8": {
+          "type": "archives_title",
+          "settings": {
+            "archives_title": "ARCHIVES"
+          }
+        },
+        "4f73830c-eb69-4840-80b9-9a99c96ba6d0": {
+          "type": "archives_link_list",
+          "settings": {
+            "archives_link_list": "archives"
+          }
+        },
+        "3f456805-3d7b-47a2-9d03-20ac3eb90a36": {
+          "type": "tags_title",
+          "settings": {
+            "tags_title": "TAGS"
+          }
+        }
+      },
+      "block_order": [
+        "7ad5a2e6-dd6e-4f5a-81a5-59f3d8d6b772",
+        "f69547ee-0b4d-44d4-b165-35194b8c7353",
+        "87c95bd8-f9f3-4897-a5f8-8f66d3786cc7",
+        "48298ca0-cd90-4034-91a2-23b47abbc803",
+        "00c2c547-9b07-464c-8b92-5df2394ea043",
+        "16d049c8-18ec-40db-a334-ddbbefa899d8",
+        "4f73830c-eb69-4840-80b9-9a99c96ba6d0",
+        "3f456805-3d7b-47a2-9d03-20ac3eb90a36"
+      ],
       "settings": {
         "layout": "collage",
         "show_image": true,
@@ -9,99 +74,10 @@
         "show_date": true,
         "show_author": false
       }
-    },
-    "164207119588a951fd": {
-      "type": "sidebar",
-      "settings": {
-        "main_menu_link_list": "sidebar-manu"
-      }
-    },
-    "164207117126e61e1e": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Create an Amazing Store With us",
-        "blog": "news",
-        "post_limit": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "soft_background": false,
-        "show_view_all": true
-      }
-    },
-    "1642071175f6d61edd": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "A New Approach to Shopping UI",
-        "blog": "news",
-        "post_limit": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "soft_background": false,
-        "show_view_all": true
-      }
-    },
-    "164207117881664e38": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Everything You Need to Create Your Store",
-        "blog": "news",
-        "post_limit": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "soft_background": false,
-        "show_view_all": true
-      }
-    },
-    "1642071180d62e7765": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Crafted from Ground Up to Sell",
-        "blog": "news",
-        "post_limit": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "soft_background": false,
-        "show_view_all": true
-      }
-    },
-    "1642071185e7cb244a": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Tour of Envato’s Melbourne Headquarters",
-        "blog": "news",
-        "post_limit": 3,
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "soft_background": false,
-        "show_view_all": true
-      }
-    },
-    "1642071201436e06e0": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<div class=\"pagination_sidebar\">\n    <a class=\"pagination_link_one\">1<\/a>\n    <a class=\"pagination_link\">2<\/a>\n    <a class=\"pagination_link\">&gt;<\/a>\n    <\/div>"
-      }
     }
   },
   "order": [
-    "main",
-    "164207119588a951fd",
-    "164207117126e61e1e",
-    "1642071175f6d61edd",
-    "164207117881664e38",
-    "1642071180d62e7765",
-    "1642071185e7cb244a",
-    "1642071201436e06e0"
+    "1656843277a71d7ce7",
+    "main"
   ]
 }

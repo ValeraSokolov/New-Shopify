@@ -265,7 +265,7 @@
                     {% endif %}
 
                     {% if block.settings.navigation_link_list.links.size > 0 %}
-                      <ul>
+                      <ul class="list_company_footer">
                         {% for link in block.settings.navigation_link_list.links %}
                           <li class="paragraf_company{% if link.active %} site-nav--active{% endif %}">
                             <a href="{{ link.url }}" class="company_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
@@ -333,7 +333,7 @@
       }
     }
   }
-
+  
   customElements.define('localization-form', LocalizationForm);
 {% endjavascript %}
 

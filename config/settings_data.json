@@ -99,21 +99,55 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
+          "cf37363c-1a24-4183-91d7-ba24e973c0c8": {
+            "type": "navigation_column",
             "settings": {
-              "menu": "footer"
+              "navigation_title": "COMPANY",
+              "navigation_link_list": "company"
+            }
+          },
+          "307604c6-c2a1-4a68-84d2-ab02b8d817fa": {
+            "type": "navigation_column",
+            "settings": {
+              "navigation_title": "POLICY INFO",
+              "navigation_link_list": "policy-info"
+            }
+          },
+          "2c195e19-40e1-49ab-9852-f7fd7e8aa319": {
+            "type": "navigation_column",
+            "settings": {
+              "navigation_title": "MY ACCOUNT",
+              "navigation_link_list": "my-account"
+            }
+          },
+          "ac962f1f-006c-4215-b8f1-c890f91d2b34": {
+            "type": "heading",
+            "settings": {
+              "heading": "Supermart",
+              "heading_size": "h1"
             }
           },
           "footer-1": {
             "type": "text",
             "settings": {
+              "text": "<p>Many say exploration is part of our dest but it’s actually our duty to future and their.<\/p><p><a href=\"#\" title=\"Address\">Address: 868 Fake Street, New York<\/a><\/p><p><a href=\"#\" title=\"Phone\">Phone: (08) 08 4752 1499<\/a><\/p><p><a href=\"#\" title=\"Email\">Email: info@supermart.com<\/a><\/p>"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading_footer": "",
+              "menu": "footer"
             }
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1"
+          "cf37363c-1a24-4183-91d7-ba24e973c0c8",
+          "307604c6-c2a1-4a68-84d2-ab02b8d817fa",
+          "2c195e19-40e1-49ab-9852-f7fd7e8aa319",
+          "ac962f1f-006c-4215-b8f1-c890f91d2b34",
+          "footer-1",
+          "footer-0"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo_header.png",
