@@ -238,8 +238,7 @@
                     <span class="h2">{{ shop.name }}</span>
                   {%- endif -%}
                 </a>
-                
-                  {%- for block in section.blocks -%}
+                 {%- for block in section.blocks -%}
                     {%- case block.type -%}
                       {%- when 'heading' -%}
                         <strong class="logo_text" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</strong>
@@ -248,12 +247,6 @@
                       </div>
                     {%- endcase -%}
                   {%- endfor -%}
-                
-               <!--<strong class="logo_text">SuperMart</strong>
-                <p class="paragraf_column">Many say exploration is part of our dest but it’s actually our duty to future and their.</p>
-                <address class="footer_address">Address: 868 Fake Street, New York</address>
-                <a class="footer_phone" href="tel:080847521499">Phone: (08) 08 4752 1499</a>
-                <a class="footer_email" href="mailto:info@supermart.com">Email: info@supermart.com</a>-->
               </div>
 
             {%- for block in section.blocks -%}

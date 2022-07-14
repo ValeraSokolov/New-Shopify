@@ -371,6 +371,13 @@ img {
   color: #777777;
 }
 
+
+@media only screen and (min-width: 768px){
+.desktop-hidden {
+    display: none !important;
+}
+}
+
 /*STILE-OPTION*/
 .visually-hidden {
   position: absolute;
@@ -533,6 +540,8 @@ img {
   .col-sm-12 {
     width: 100%;
   }
+
+  .top_nav,
   .logo_text,
   .navi {
     position: absolute;
@@ -540,5 +549,11 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .desktop-hidden {
+      display: none !important;
   }
 }
