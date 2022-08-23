@@ -1,0 +1,115 @@
+<!-- Shipping -->
+<link rel="stylesheet" href="{{ 'util.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+<div class="rich-text">
+  <div class="rich-text__blocks">
+      <h1 class="{{ section.settings.heading_size }}" {{ section.shopify_attributes }}>{{ section.settings.heading | escape }}</h1>
+    <div class="rich-text__text rte" {{ section.shopify_attributes }}>{{ section.settings.rich-text | escape }}
+    </div>
+  </div>
+</div>
+
+<section class="shipping bgwhite p-t-62 p-b-46" data-section-id="{{ section.id }}">
+ {% render 'feature-service1', blocks: section.blocks %}
+</section>
+{% schema %}
+{
+  "name": "Service Boxes section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Talk about your brand",
+      "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "rich-text",
+      "default": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
+      "label": "t:sections.rich-text.blocks.text.settings.text.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "Feature box",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_service_title",
+          "label": "Feature Title"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_service_description",
+          "label": "Feature description"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "social icon 1"
+        },
+        {
+          "type": "url",
+          "id": "social_url_1",
+          "label": "social url 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "social icon 2"
+        },
+        {
+          "type": "url",
+          "id": "social_url_2",
+          "label": "social url 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "social icon 3"
+        },
+        {
+          "type": "url",
+          "id": "social_url_3",
+          "label": "social url 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "social icon 4"
+        },
+        {
+          "type": "url",
+          "id": "social_url_4",
+          "label": "social url 4"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Service box section",
+    "category": "Feature Sections",
+    "blocks": [
+      {
+        "type": "box"
+      },
+      {
+        "type": "box"
+      }
+    ]
+  }]
+}
+{% endschema %}

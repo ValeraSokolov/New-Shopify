@@ -1,0 +1,116 @@
+.pagination-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 7rem;
+}
+
+@media screen and (min-width: 990px) {
+  .pagination-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  padding-top: 35px;
+  width: 100%;
+  border-top: 2px solid #e8e8e8;
+  align-items: center;
+}
+
+.pagination__list > li {
+  flex: 1 0 4.4rem;
+  max-width: 4.4rem;
+}
+
+.pagination__list > li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.pagination__item {
+  padding: 5px 15px 5px;
+  text-decoration: none;
+  color: #9e9c9c;
+  border: 1px solid #9e9c9c;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+/*PAGINATION_SIDEBAR*/
+.pagination_sidebar {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  padding-top: 35px;
+  width: 56%;
+  border-top: 2px solid #e8e8e8;
+}
+
+.pagination_link {
+  padding: 5px 15px 5px;
+  text-decoration: none;
+  color: #9e9c9c;
+  border: 1px solid #9e9c9c;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+.pagination_link_one {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+  border: 1px solid #9e9c9c;
+  border-radius: 3px;
+}
+
+a.pagination__item:hover::after {
+  height: 0.1rem;
+}
+
+.pagination__item .icon-caret {
+  height: 0.6rem;
+}
+
+.pagination__item--current::after {
+  height: 0.1rem;
+}
+
+.pagination__item--current::after,
+.pagination__item:hover::after {
+  
+  display: block;
+  width: 2rem;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+
+.pagination__item--next .icon {
+  margin-left: -0.2rem;
+  transform: rotate(90deg);
+}
+
+.pagination__item--next:hover .icon {
+  transform: rotate(90deg) scale(1.07);
+}
+
+.pagination__item--prev .icon {
+  margin-right: -0.2rem;
+  transform: rotate(-90deg);
+}
+
+.pagination__item--prev:hover .icon {
+  transform: rotate(-90deg) scale(1.07);
+}
+
+.pagination__item-arrow:hover::after {
+  display: none;
+}

@@ -1,0 +1,121 @@
+<div data-section-id="{{ section.id }}" data-section-type="sidebar-section">
+  <nav class="sidebar__item small--text-center medium-up--one-fifth" role="navigation">
+    <hr class="hr--small medium-up--hide">
+    <div id="SiteNav" class="site-nav" role="menu">
+      <ul class="navi_main container">
+        {% render 'icon-navigation-forward' %} 
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+            {% when 'navigation_title' %}
+            {% if block.settings.navigation_title != blank %}
+              <h3 class="sidebar_title">{{ block.settings.navigation_title | escape }}</h3>
+            {% endif %}
+        
+        {% when 'navigation_home' %}
+          {% for link in block.settings.navigation_home.links %}
+            {% if block.settings.navigation_home != blank %}
+            <li class="navigation_list{% if link.active %} site-nav--active{% endif %}">
+              <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endcase %}
+    {%- endfor -%}
+      </ul>
+    </div>
+    <hr class="medium-up--hide hr--small {% if request.page_type == 'index' %}hr--border-bottom{% endif %}">
+  </nav>
+</div>
+
+{% schema %}
+{
+  "name": "Navigation home",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.navigation_home.settings.header"
+    }
+    /**{
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:sections.navigation_home.settings.layout.options__1.label"
+        },
+        {
+          "value": "collage",
+          "label": "t:sections.navigation_home.settings.layout.options__2.label"
+        }
+      ],
+      "default": "collage",
+      "label": "t:sections.navigation_home.settings.layout.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "default": true,
+      "label": "t:sections.navigation_home.settings.show_image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.navigation_home.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.navigation_home.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.navigation_home.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.navigation_home.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.navigation_home.settings.image_height.label",
+      "info": "t:sections.navigation_home.settings.image_height.info"
+    }**/
+   
+  ],
+  "blocks": [
+    {
+      "type": "navigation_title",
+      "name": "Navigation_title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "navigation_title",
+          "default": "QUICK LINK:",
+          "label": "navigation title"
+        }
+      ]
+    },
+    {
+      "type": "navigation_home",
+      "name": "Navigation_home",
+      "settings": [
+    {
+      "type": "link_list",
+      "id": "navigation_home",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+  ],
+  "presets": [
+    {
+      "name": "Navigation home"
+    }
+  ]
+}
+{% endschema %}

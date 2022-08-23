@@ -1,0 +1,234 @@
+{
+  "current": {
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_accent_1": "#121212",
+    "colors_accent_2": "#408de4",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#FFFFFF",
+    "colors_background_2": "#F3F3F3",
+    "type_header_font": "assistant_n4",
+    "type_body_font": "assistant_n4",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_vimeo_link": "https:\/\/vimeo.com\/shopify",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "color_scheme": "background-1"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/logo_header.png",
+          "logo_width": 100,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "multicolumn-footer": {
+        "type": "multicolumn-footer",
+        "blocks": {
+          "57bcd3c7-1192-444b-80d4-6512a8caacbd": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/free-shipping.png",
+              "title": "FREE SHIPPING",
+              "text": "<p>Free Shipping on World wide Order<br\/>Over $99.<\/p>"
+            }
+          },
+          "ea59ccf7-c658-4e98-8abe-1f10778fc1e0": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/trusted-pay.png",
+              "title": "TRUSTED PAY",
+              "text": "<p>100% Payment Protection & <br\/>Easy Return<\/p>"
+            }
+          },
+          "bf814ff0-19b6-4e5f-9b63-aea18ede5ad9": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/secured-payment.png",
+              "title": "SECURED PAYMENT",
+              "text": "<p>All Major Credit & Debit Cards<br\/>Accepted<\/p>"
+            }
+          },
+          "7aff1268-f6f5-4107-84de-6dd8817b0f46": {
+            "type": "column",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/shop-on-app.png",
+              "title": "SHOP ON APP",
+              "text": "<p>Just Dowload our App & Shop <br\/>With Best Offers!<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "57bcd3c7-1192-444b-80d4-6512a8caacbd",
+          "ea59ccf7-c658-4e98-8abe-1f10778fc1e0",
+          "bf814ff0-19b6-4e5f-9b63-aea18ede5ad9",
+          "7aff1268-f6f5-4107-84de-6dd8817b0f46"
+        ],
+        "settings": {
+          "title": "",
+          "image_width": "third",
+          "image_ratio": "adapt",
+          "column_alignment": "center",
+          "background_style": "none",
+          "button_label": "",
+          "button_link": "",
+          "swipe_on_mobile": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "cf37363c-1a24-4183-91d7-ba24e973c0c8": {
+            "type": "navigation_column",
+            "settings": {
+              "navigation_title": "COMPANY",
+              "navigation_link_list": "company"
+            }
+          },
+          "307604c6-c2a1-4a68-84d2-ab02b8d817fa": {
+            "type": "navigation_column",
+            "settings": {
+              "navigation_title": "POLICY INFO",
+              "navigation_link_list": "policy-info"
+            }
+          },
+          "2c195e19-40e1-49ab-9852-f7fd7e8aa319": {
+            "type": "navigation_column",
+            "settings": {
+              "navigation_title": "MY ACCOUNT",
+              "navigation_link_list": "my-account"
+            }
+          },
+          "ac962f1f-006c-4215-b8f1-c890f91d2b34": {
+            "type": "heading",
+            "settings": {
+              "heading": "Supermart",
+              "heading_size": "h1"
+            }
+          },
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Many say exploration is part of our dest but it’s actually our duty to future and their.<\/p><p><a href=\"#\" title=\"Address\">Address: 868 Fake Street, New York<\/a><\/p><p><a href=\"#\" title=\"Phone\">Phone: (08) 08 4752 1499<\/a><\/p><p><a href=\"#\" title=\"Email\">Email: info@supermart.com<\/a><\/p>"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading_footer": "",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "cf37363c-1a24-4183-91d7-ba24e973c0c8",
+          "307604c6-c2a1-4a68-84d2-ab02b8d817fa",
+          "2c195e19-40e1-49ab-9852-f7fd7e8aa319",
+          "ac962f1f-006c-4215-b8f1-c890f91d2b34",
+          "footer-1",
+          "footer-0"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo_header.png",
+          "color_scheme": "accent-2",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#FFFFFF",
+      "colors_accent_1": "#121212",
+      "colors_accent_2": "#408de4",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#FFFFFF",
+      "colors_background_2": "#F3F3F3",
+      "type_header_font": "assistant_n4",
+      "type_body_font": "assistant_n4",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "color_scheme": "background-1"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
+        }
+      }
+    },
+    "Craft": {
+      "colors_solid_button_labels": "#EFECEC",
+      "colors_accent_1": "#2A332F",
+      "colors_accent_2": "#476154",
+      "colors_text": "#1C1A1A",
+      "colors_outline_button_labels": "#7B8382",
+      "colors_background_1": "#EFECEC",
+      "colors_background_2": "#C1BCAE",
+      "type_header_font": "americana_n4",
+      "type_body_font": "quattrocento_sans_n4",
+      "sections": {
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "menu",
+            "text"
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
+        }
+      }
+    }
+  }
+}

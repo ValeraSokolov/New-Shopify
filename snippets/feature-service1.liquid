@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="flex-w p-l-20 p-r-20 p-b-20 p-t-20  bo16">
+    {%- if blocks.size > 0 -%}
+      {%- for block in blocks -%}
+        <div class="flex-col-c w-size6-1 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+          <div class="feature-service_wrapper">
+            <div class="feature-service_image p-r-20">
+                <img src="{{ block.settings.icon | img_url:'263x263'}}"
+                  alt="{{ block.settings.icon.alt }}"
+									height="{{ block.settings.icon.height }}"
+									width="{{ block.settings.icon.width }}"
+									loading="lazy"
+                >
+                </div>
+              <div class="feature-service_text t-left">
+                <h4 class="m-text12 t-left">
+                  {{ block.settings.feature_service_title }}
+                </h4>
+                <span class="s-text11 t-left">
+                  {{ block.settings.feature_service_description }}
+                </span>
+               <ul class="social-list">
+                {%- if block.settings.icon_1 != blank -%}
+                  <li class="social-list__item">
+                    <a href="{{block.settings.social_url_1}}">
+                      <img src="{{ block.settings.icon_1 | img_url:'20x20' }}"
+                        alt="{{ block.settings.icon_1.alt }}"
+                        height="{{ block.settings.icon_1.height }}"
+                        width="{{ block.settings.icon_1.width }}"
+                        loading="lazy"
+                      >
+                    </a>
+                  </li>
+                {%- endif -%}
+                {% if block.settings.icon_2 != blank %}
+                  <li class="social-list__item">
+                    <a href="{{block.settings.social_url_2}}">
+                      <img src="{{ block.settings.icon_2 | img_url:'20x20' }}"
+                        alt="{{ block.settings.icon_2.alt }}"
+                        height="{{ block.settings.icon_2.height }}"
+                        width="{{ block.settings.icon_2.width }}"
+                        loading="lazy"
+                      >
+                    </a>
+                  </li>
+                {%- endif -%}
+                {% if block.settings.icon_3 != blank -%}
+                  <li class="social-list__item">
+                    <a href="{{block.settings.social_url_3}}">
+                      <img src="{{ block.settings.icon_3 | img_url:'20x20' }}"
+                        alt="{{ block.settings.icon_3.alt }}"
+                        height="{{ block.settings.icon_3.height }}"
+                        width="{{ block.settings.icon_3.width }}"
+                        loading="lazy"
+                      >
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if block.settings.icon_4 != blank -%}
+                  <li class="social-list__item">
+                    <a href="{{block.settings.social_url_4}}">
+                      <img src="{{ block.settings.icon_4 | img_url:'20x20' }}"
+                        alt="{{ block.settings.icon_4.alt }}"
+                        height="{{ block.settings.icon_4.height }}"
+                        width="{{ block.settings.icon_4.width }}"
+                        loading="lazy"
+                      >
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>

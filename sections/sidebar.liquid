@@ -1,0 +1,95 @@
+<div data-section-id="{{ section.id }}" data-section-type="sidebar-section">
+  <nav class="sidebar__item small--text-center medium-up--one-fifth" role="navigation">
+    <hr class="hr--small medium-up--hide">
+    <div id="SiteNav" class="site-nav" role="menu">
+      <ul class="list--nav">
+        <div class="sidebar">
+          <div class="field">
+            <input class="sidebar_search"
+              id="Search-In-Modal"
+              type=""
+              name="q"
+              value=""
+              placeholder="{{ 'general.search.search' | t }}"
+              {%- if settings.predictive_search_enabled -%}
+                role="combobox"
+                aria-expanded="false"
+                aria-owns="predictive-search-results-list"
+                aria-controls="predictive-search-results-list"
+                aria-haspopup="listbox"
+                aria-autocomplete="list"
+                autocorrect="off"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+              {%- endif -%}
+            >
+            <input type="hidden" name="options[prefix]" value="last">
+            <button aria-label="{{ 'general.search.search' | t }}">
+              <svg class="svg-icon" viewBox="0 0 20 20">
+                <path fill="none" d="M19.129,18.164l-4.518-4.52c1.152-1.373,1.852-3.143,1.852-5.077c0-4.361-3.535-7.896-7.896-7.896
+                  c-4.361,0-7.896,3.535-7.896,7.896s3.535,7.896,7.896,7.896c1.934,0,3.705-0.698,5.078-1.853l4.52,4.519
+                  c0.266,0.268,0.699,0.268,0.965,0C19.396,18.863,19.396,18.431,19.129,18.164z M8.567,15.028c-3.568,0-6.461-2.893-6.461-6.461
+                  s2.893-6.461,6.461-6.461c3.568,0,6.46,2.893,6.46,6.461S12.135,15.028,8.567,15.028z"></path>
+              </svg>
+            </button>
+          </div>
+        <h2 class="sidebar_tittle">CATEGORIES</h2>
+        </div>
+        {% for link in section.settings.main_menu_link_list.links %}
+          {% if link.links != blank %}
+          {% else %}
+            <li class="categories_list{% if link.active %} site-nav--active{% endif %}">
+              <a href="{{ link.url }}" class="categories_link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <h2 class="sidebar_tittle">RECENT POSTS</h2>
+        <p class="recent_post">Tour of Envato’s Melbourne Head
+        quarters</p>
+        <p class="recent_date_post">December 28, 2016</p>
+        <p class="recent_post">Echo Three to Echo Seven</p>
+        <p class="recent_date_post">December 28, 2016</p>
+        <p class="recent_post">Oh, Princess Leia, are you all right?</p>
+        <p class="recent_date">December 28, 2016</p>
+        <h2 class="sidebar_tittle">ARCHIVES</h2>
+        <li class="categories_list">
+          <a href="#" class="categories_link">November 2016</a></li>
+        <li class="categories_list">
+          <a href="#" class="categories_link">December 2016</a></li>
+        <li class="categories_list">
+          <a href="#" class="categories_link">January 2017</a></li>
+        <h2 class="sidebar_tittle">TAGS</h2>
+        <li class="tags_link">
+          <a href="#" class="link_tags">Lookbook</a>
+          <a href="#" class="link_tags">Electronics</a>
+        </li>
+        <li class="tags_link">
+          <a href="#" class="link_tags">News</a>
+          <a href="#" class="link_tags">Innovative</a>
+          <a href="#" class="link_tags">Envato</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="medium-up--hide hr--small {% if request.page_type == 'index' %}hr--border-bottom{% endif %}">
+  </nav>
+</div>
+
+{% schema %}
+{
+  "name": "Sidebar",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "main_menu_link_list",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sidebar"
+    }
+  ]
+}
+{% endschema %}

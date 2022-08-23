@@ -1,0 +1,58 @@
+<div class="breadcrumbs container">
+  {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+    {%- assign t = template | split: '.' | first -%}
+<div class="breadcrambs-container">
+	<h2 class="title visually-hidden">Breadcrambs</h2>
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
+      <ol class="breadcrumbs__list">
+        
+       {%- case t -%}
+          {%- when 'page' -%}
+            <li class="breadcrumbs__item">
+              <h2 class="breadcrumbs__link">{{ page.title }}</h2>
+            </li>
+             {%- when 'product' -%}
+            {%- if collection.url -%}
+              <li class="breadcrumbs__item">
+                {{ collection.title | link_to: collection.url }}
+              </li>
+            {%- endif -%}
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+            </li>
+          {%- when 'collection' and collection.handle -%}
+            {%- if current_tags -%}
+              <li class="breadcrumbs__item">
+                {{ collection.title | link_to: collection.url }}
+              </li>
+              <li class="breadcrumbs__item">
+                {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: "+"}}</a>
+              </li>
+            {%- else -%}
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+              </li>
+            {%- endif -%}
+          
+          {%- when 'article' -%}
+            <li class="breadcrumbs__item">
+              {{ blog.title | link_to: blog.url }}
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+            </li>
+        {%- endcase -%}
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link-home" href="{{ routes.root_url }}">HOME/</a>
+          <span class="breadcrumbs__link-page">{{ page_title }}</span>
+        </li> 
+      </ol>
+    </nav>
+    {%- endunless -%}
+  </div>
+</div>
