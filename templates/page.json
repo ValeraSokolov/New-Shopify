@@ -208,11 +208,6 @@
         "heading": "Talk about your brand",
         "rich-text": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store."
       }
-    },
-    "1657379678bed478fe": {
-      "type": "main-page",
-      "settings": {
-      }
     }
   },
   "order": [
@@ -220,7 +215,6 @@
     "1650555525a350c025",
     "1650555728186579fb",
     "1650556799e9371652",
-    "16505552962cf5680c",
-    "1657379678bed478fe"
+    "16505552962cf5680c"
   ]
 }
