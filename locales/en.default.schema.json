@@ -1023,6 +1023,43 @@
         "name": "Image with text"
       }
     },
+    "cotntact-info": {
+      "name": "Cotntact Info",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text Area"
+            }
+          }
+        },
+        "richtext": {
+          "name": "Rich text",
+          "settings": {
+            "richtext": {
+              "label": "Description"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Cotntact Info"
+      }
+    },
     "main-article": {
       "name": "Blog post",
       "blocks": {

@@ -1,3 +1,44 @@
+.contact_form {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 30px;
+}
+
+.contact_form__container {
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.field_label__contact-us {
+  font-size: 1.6rem;
+  left: 1.5rem;
+  top: 1rem;
+  margin-bottom: 0;
+  pointer-events: none;
+  transition: top var(--duration-short) ease,
+    font-size var(--duration-short) ease;
+  color: #6d6c6c;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+
+.field_label__contact-us span{
+  color: red;
+}
+
+
+.contact_maps__container {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.maps-text__content {
+  width: 85%;
+}
+
 .contact img {
   max-width: 100%;
 }
@@ -22,6 +63,27 @@
 
 .contact__button {
   margin-top: 3rem;
+}
+
+.button__send{
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 0.9rem 3rem 1.1rem;
+  text-decoration: none;
+  border: 0.1rem solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.1remrgba(var(--color-button),var(--alpha-button-border));
+  color: rgb(var(--color-button-text));
+  min-width: 12rem;
+  min-height: 4.5rem;
+  transition: box-shadow var(--duration-short) ease;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #6495ed;
 }
 
 @media screen and (min-width: 750px) {
